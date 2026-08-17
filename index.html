@@ -78,6 +78,36 @@
     color: #4a5568;
   }
   .term { font-weight: bold; color: #285e61; }
+  h4 { color: #285e61; margin: 22px 0 4px; font-size: 1em; }
+  /* 流程图 */
+  .flow { margin: 12px 0 6px; }
+  .flow .fstep, .flow .fgroup {
+    border: 1px solid #81e6d9;
+    background: #e6fffa;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  .flow .fstep.start { background: #b2f5ea; border-color: #4fd1c5; font-weight: 600; }
+  .flow .fstep.write { background: #feebc8; border-color: #f6ad55; }
+  .flow .fgroup { background: #edf2f7; border-color: #cbd5e0; padding: 8px; }
+  .flow .fgroup.analyse { background: #f0fff4; border-color: #9ae6b4; }
+  .flow .fgroup-head { padding: 2px 6px 8px; }
+  .flow .fcols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .flow .fcols.two { grid-template-columns: repeat(2, 1fr); }
+  .flow .fcols > div {
+    background: #fff;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+  .flow .farrow { text-align: center; color: #319795; line-height: 1.2; margin: 2px 0; }
+  .flow .ch { color: #718096; font-size: 0.85em; font-style: italic; margin-left: 4px; }
+  .flow .cn { display: block; color: #718096; font-size: 0.82em; font-weight: normal; }
+  @media (max-width: 600px) {
+    .flow .fcols { grid-template-columns: repeat(2, 1fr); }
+  }
   .toolbar {
     position: sticky;
     top: 0;
@@ -238,6 +268,147 @@
     <li><strong>Respect the room and FOCUS</strong> — computers open when required, phones down — only when necessary, full professional conduct.<br>
       <span class="meta">尊重课堂、保持专注：需要时才开电脑，手机收起来，全程专业举止。</span></li>
   </ul>
+</div>
+
+<h3 contenteditable="false">4. Set your expectations（把预期定好）</h3>
+
+<div class="box" contenteditable="false">
+  <p><strong>Challenges students commonly face</strong>（学生普遍会遇到的困难）</p>
+  <ul>
+    <li>Choosing <strong>one feasible topic</strong>, not ten exciting ones.<br>
+      <span class="meta">选一个做得成的题，而不是十个听起来很带感的题。</span></li>
+    <li>Balancing full-time work against research demands.<br>
+      <span class="meta">全职工作与研究投入之间的平衡。</span></li>
+    <li>Weak literature-search and academic-writing habits.<br>
+      <span class="meta">文献检索和学术写作的习惯薄弱。</span></li>
+    <li>Uncertainty over which methodology and design to choose.<br>
+      <span class="meta">不确定该选哪种方法论和研究设计。</span></li>
+    <li>Getting real access to organisations and respondents.<br>
+      <span class="meta">真正拿到企业和受访者的调研入口。</span></li>
+    <li>Delays in obtaining ethical clearance.<br>
+      <span class="meta">伦理审批（ethical clearance）下来得慢。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">5. The cost of falling behind（落后的代价）</h3>
+
+<div class="box" contenteditable="false">
+  <p><strong>Setbacks of not completing on time</strong>（没按时完成的后果）</p>
+  <ul>
+    <li>Extensions require <strong>fees, paperwork and dean-level approval</strong>.<br>
+      <span class="meta">申请延期要交费、走流程，还要院长级别审批。</span></li>
+    <li>A <strong>maximum study period</strong> is enforced — exceed it, and you are <strong>de-registered</strong>.<br>
+      <span class="meta">最长学习年限是硬性的——超过就被注销学籍。</span></li>
+    <li>Missed course cohorts mean missed graduation dates.<br>
+      <span class="meta">错过一届的课，就错过对应的毕业时间。</span></li>
+  </ul>
+  <div class="note">
+    Time lost at this stage is rarely recovered later in the programme.<br>
+    <span class="meta">这个阶段丢掉的时间，在后面的课程里几乎补不回来。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">Read this twice — Why a noble idea still fails（好想法为什么还是会挂）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>A brilliant idea with <strong>no feasible design</strong> will not survive proposal defence.<br>
+      <span class="meta">想法再好，设计不可行，proposal 答辩过不去。</span></li>
+    <li><strong>Data collected before ethical clearance = automatic disqualification. No exceptions.</strong><br>
+      <span class="meta">在伦理审批下来之前就收数据 = 直接取消资格，没有例外。</span></li>
+    <li>Objectives that don't match your problem statement get sent back for rewrite.<br>
+      <span class="meta">研究目标和问题陈述对不上，就打回重写。</span></li>
+    <li>Your entire study needs to be <strong>in sync</strong> — from the topic to the recommendations.<br>
+      <span class="meta">整篇研究要前后一致：从选题一路到最后的建议。</span></li>
+    <li>Formatting and structure that ignore the <strong>SU guide</strong> will not be accepted for examination.<br>
+      <span class="meta">格式和结构不按 SU（Strathmore University）指南来，不予送审。</span></li>
+  </ul>
+
+  <div class="answer">
+    Rigour — not novelty / innovation — is what carries you through to graduation.<br>
+    <span class="meta" style="font-weight:normal;">严谨（rigour）才能把你送到毕业，不是新颖或创新。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">6. Grounding the study area（把研究领域落地）</h3>
+
+<div class="box" contenteditable="false">
+  <p><strong>What is business &amp; management research?</strong>（什么是商业与管理研究？）</p>
+  <ul>
+    <li>Research is <strong>systematic enquiry that increases knowledge</strong>（Saunders, Lewis &amp; Thornhill, Ch. 1）<br>
+      <span class="meta">研究是系统性的探究，其目的是增加知识。</span></li>
+    <li>It is <strong>deliberate investigation</strong> — distinct from opinion, assumption or anecdote.<br>
+      <span class="meta">研究是有意识、有计划的调查——区别于观点、假设和道听途说。</span></li>
+    <li>Business research applies this same discipline to solve <strong>real organisational problems</strong>.<br>
+      <span class="meta">商业研究把同样的严谨方法用来解决真实的组织问题。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">7. The Road Ahead（接下来的路）</h3>
+
+<div class="box" contenteditable="false">
+  <p><strong>The research process, start to finish</strong>（研究的完整流程）</p>
+  <ol>
+    <li>Formulate Topic<span class="meta"> — 确定选题</span></li>
+    <li>Review Literature<span class="meta"> — 文献综述</span></li>
+    <li>Design the Study<span class="meta"> — 研究设计</span></li>
+    <li>Collect Data<span class="meta"> — 收集数据</span></li>
+    <li>Analyse Data<span class="meta"> — 分析数据</span></li>
+    <li>Write &amp; Present<span class="meta"> — 写作与呈现</span></li>
+  </ol>
+
+  <div class="note">
+    Every stage matters — a weak start (topic, philosophy) undermines everything after it.<br>
+    <span class="meta">每一步都算数——开头（选题、研究哲学）不牢，后面全被拖累。</span>
+  </div>
+
+  <h4 contenteditable="false">课上参考图：教材里的完整流程</h4>
+  <p class="meta" contenteditable="false">
+    对应 Saunders, Lewis &amp; Thornhill (2022), Figure 1.2 <em>The research process</em>, p.13 —— 括号内为教材章节号。
+  </p>
+
+  <div class="flow" contenteditable="false">
+    <div class="fstep start">Begin to think about research<span class="cn">开始思考研究</span></div>
+    <div class="farrow">↓</div>
+    <div class="fstep">Generate your research idea and develop the proposal <span class="ch">(Ch. 2)</span><span class="cn">形成研究想法、写出 proposal</span></div>
+    <div class="farrow">↓</div>
+    <div class="fstep">Critically review the literature <span class="ch">(Ch. 3)</span><span class="cn">批判性文献综述</span></div>
+    <div class="farrow">↓</div>
+    <div class="fstep">Understand your philosophy and approach <span class="ch">(Ch. 4)</span><span class="cn">明确研究哲学与研究路径</span></div>
+    <div class="farrow">↓</div>
+    <div class="fstep">Formulate your research design <span class="ch">(Ch. 5)</span><span class="cn">确定研究设计</span></div>
+    <div class="farrow">↓</div>
+    <div class="fstep">Negotiate access and address ethical issues <span class="ch">(Ch. 6)</span><span class="cn">争取调研入口、处理伦理问题</span></div>
+    <div class="farrow">↓</div>
+    <div class="fgroup">
+      <div class="fgroup-head">Plan your data collection and collect data considering one or more of:<span class="cn">规划并收集数据，从以下方式中选一种或多种</span></div>
+      <div class="fcols">
+        <div>Sampling<span class="ch">(Ch. 7)</span><span class="cn">抽样</span></div>
+        <div>Secondary data<span class="ch">(Ch. 8)</span><span class="cn">二手数据</span></div>
+        <div>Observation<span class="ch">(Ch. 9)</span><span class="cn">观察</span></div>
+        <div>Interviews and research diaries<span class="ch">(Ch. 10)</span><span class="cn">访谈与研究日志</span></div>
+        <div>Questionnaires<span class="ch">(Ch. 11)</span><span class="cn">问卷</span></div>
+      </div>
+    </div>
+    <div class="farrow">↓</div>
+    <div class="fgroup analyse">
+      <div class="fgroup-head">Analyse your data either or both:<span class="cn">分析数据，二者之一或两者兼用</span></div>
+      <div class="fcols two">
+        <div>Quantitatively<span class="ch">(Ch. 12)</span><span class="cn">定量</span></div>
+        <div>Qualitatively<span class="ch">(Ch. 13)</span><span class="cn">定性</span></div>
+      </div>
+    </div>
+    <div class="farrow">↓</div>
+    <div class="fstep write">Write your project report and prepare your presentation <span class="ch">(Ch. 14)</span><span class="cn">撰写研究报告、准备答辩</span></div>
+    <div class="farrow">↓</div>
+    <div class="fstep start">Submit your project report and give your presentation<span class="cn">提交报告并完成答辩</span></div>
+  </div>
+
+  <div class="note">
+    图中两种箭头：实线 = <strong>Forward planning</strong>（向前推进）；虚线 = <strong>Reflection and revision</strong>（回看与修改）——
+    每个阶段都可以往回连到任一前序阶段，所以流程是<strong>迭代</strong>的，不是一条直线。左侧贯穿全程的竖条是
+    <strong>Writing and reflecting</strong>：写作和反思从第一天做到最后一天，不是最后才开始。
+  </div>
 </div>
 
 </div>
