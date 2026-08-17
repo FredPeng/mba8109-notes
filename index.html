@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBA 8109 课程笔记</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f6f8f7;
+    color: #222;
+    line-height: 1.6;
+  }
+  h1 {
+    border-bottom: 3px solid #285e61;
+    padding-bottom: 10px;
+    color: #285e61;
+  }
+  h2 {
+    color: #2c7a7b;
+    margin-top: 30px;
+    border-left: 4px solid #2c7a7b;
+    padding-left: 10px;
+  }
+  h3 { color: #444; margin-top: 20px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    background: #fff;
+  }
+  th, td {
+    border: 1px solid #cbd5e0;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #e6fffa; }
+  tr.total { background: #fefcbf; font-weight: bold; }
+  .box {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .formula {
+    background: #e6fffa;
+    border-left: 4px solid #319795;
+    padding: 8px 12px;
+    margin: 10px 0;
+    font-family: "Times New Roman", serif;
+  }
+  .answer {
+    background: #f0fff4;
+    border-left: 4px solid #38a169;
+    padding: 8px 12px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  .note {
+    background: #fffaf0;
+    border-left: 4px solid #ed8936;
+    padding: 8px 12px;
+    margin: 10px 0;
+    font-size: 0.95em;
+  }
+  .todo {
+    background: #f7fafc;
+    border: 1px dashed #a0aec0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    color: #718096;
+    font-size: 0.93em;
+  }
+  .term { font-weight: bold; color: #285e61; }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  button {
+    background: #285e61;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  button:hover { background: #2c7a7b; }
+  button.danger { background: #c53030; }
+  button.danger:hover { background: #9b2c2c; }
+  #status { color: #38a169; font-size: 14px; }
+  [contenteditable="true"]:focus {
+    outline: 2px solid #319795;
+    outline-offset: 2px;
+    background: #fffef0;
+  }
+  .toc {
+    background: #fff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .toc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #285e61;
+    font-size: 1.05em;
+  }
+  .toc-head .arrow { transition: transform 0.2s; }
+  .toc.collapsed .arrow { transform: rotate(-90deg); }
+  .toc.collapsed #tocList { display: none; }
+  #tocList {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+    columns: 2;
+    column-gap: 24px;
+  }
+  #tocList li { margin: 4px 0; break-inside: avoid; }
+  #tocList li.sub { padding-left: 16px; font-size: 0.92em; }
+  #tocList a {
+    color: #2c7a7b;
+    text-decoration: none;
+    display: block;
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+  #tocList a:hover { background: #e6fffa; text-decoration: underline; }
+  @media (max-width: 600px) { #tocList { columns: 1; } }
+  .h2-anchor { scroll-margin-top: 70px; }
+  .meta { color: #718096; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="toggleEdit()" id="editBtn">✏️ 进入编辑模式</button>
+  <button onclick="saveNotes()">💾 保存</button>
+  <button onclick="exportHTML()">📥 导出 HTML</button>
+  <button onclick="resetNotes()" class="danger">🔄 重置</button>
+  <span id="status"></span>
+</div>
+
+<nav class="toc" id="toc">
+  <div class="toc-head" onclick="document.getElementById('toc').classList.toggle('collapsed')">
+    <span>📑 目录</span>
+    <span class="arrow">▼</span>
+  </div>
+  <ul id="tocList"></ul>
+</nav>
+
+<div id="content">
+
+<h1 contenteditable="false">MBA 8109 Research Methods</h1>
+<p contenteditable="false"><em>研究方法 — 课堂笔记</em></p>
+<p class="meta" contenteditable="false">Strathmore Business School · MBA · 笔记建立于 2026-08-17</p>
+
+<div class="note" contenteditable="false">
+  <strong>使用说明：</strong>本页是课程笔记的骨架。下面各章节按研究方法课程的通用顺序预留，标注
+  <span style="color:#718096;">「待补充」</span> 的方框会在课上随讲随填。点击顶部「进入编辑模式」可直接在浏览器里改，
+  修改自动存到 localStorage；正式内容仍以本文件为准。
+</div>
+
+<h2 contenteditable="false">〇、课程信息与考核</h2>
+
+<div class="box" contenteditable="false">
+  <table>
+    <tbody>
+      <tr><th>课程代码</th><td>MBA 8109</td></tr>
+      <tr><th>课程名称</th><td>Research Methods（研究方法）</td></tr>
+      <tr><th>讲师</th><td class="todo" style="border:none;background:none;padding:8px 12px;">待补充</td></tr>
+      <tr><th>教材 / 参考书</th><td class="todo" style="border:none;background:none;padding:8px 12px;">待补充（常见：Saunders et al., <em>Research Methods for Business Students</em>；Sekaran &amp; Bougie；Creswell）</td></tr>
+      <tr><th>考核方式</th><td class="todo" style="border:none;background:none;padding:8px 12px;">待补充（CAT / 期末考 / 研究计划书 Research Proposal 权重）</td></tr>
+      <tr><th>重要日期</th><td class="todo" style="border:none;background:none;padding:8px 12px;">待补充</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 contenteditable="false">一、研究的本质（Introduction to Research）</h2>
+
+<div class="box" contenteditable="false">
+  <h3>核心概念</h3>
+  <ul>
+    <li><span class="term">研究（Research）</span>：为回答问题或解决问题而进行的系统性、有目的的探究过程。</li>
+    <li><span class="term">基础研究 vs 应用研究</span>：前者扩展知识本身，后者解决具体的管理/组织问题。</li>
+    <li><span class="term">科学研究的特征</span>：目的性、严谨性、可检验性、可重复性、精确与可信、客观性、可推广性、简约性。</li>
+    <li><span class="term">演绎 vs 归纳</span>：演绎（理论 → 假设 → 数据 → 检验）；归纳（数据 → 模式 → 理论）。</li>
+  </ul>
+  <div class="todo">待补充：课上给出的定义、例子与考点。</div>
+</div>
+
+<h2 contenteditable="false">二、研究哲学与范式（Research Philosophy &amp; Paradigms）</h2>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead>
+      <tr><th>范式</th><th>本体论 Ontology</th><th>认识论 Epistemology</th><th>典型方法</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>实证主义 Positivism</td><td>客观、单一现实</td><td>可观测、可测量的事实</td><td>定量、假设检验、调查问卷</td></tr>
+      <tr><td>解释主义 Interpretivism</td><td>现实由主体建构</td><td>主观意义、情境化理解</td><td>定性、访谈、民族志</td></tr>
+      <tr><td>批判实在论 Critical Realism</td><td>现实存在但只能间接观察</td><td>需透过机制解释表象</td><td>混合、案例研究</td></tr>
+      <tr><td>实用主义 Pragmatism</td><td>取决于研究问题</td><td>以「有用」为标准</td><td>混合方法 Mixed Methods</td></tr>
+    </tbody>
+  </table>
+  <div class="todo">待补充：讲师强调的范式与研究设计之间的对应关系。</div>
+</div>
+
+<h2 contenteditable="false">三、研究问题与研究目标（Research Problem, Objectives &amp; Questions）</h2>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><span class="term">研究缺口（Research Gap）</span>：现有文献未解答、结论矛盾或情境未覆盖之处。</li>
+    <li><span class="term">问题陈述（Statement of the Problem）</span>：现状 → 理想状态 → 差距 → 后果 → 因此需要研究。</li>
+    <li><span class="term">研究目标</span>：一般目标（General Objective）+ 若干具体目标（Specific Objectives），须可测量。</li>
+    <li><span class="term">研究问题 / 假设</span>：每个具体目标对应一个研究问题或假设（H₀ / H₁）。</li>
+    <li><span class="term">研究的意义（Significance）与范围（Scope &amp; Limitations）</span>。</li>
+  </ul>
+  <div class="todo">待补充：课上的问题陈述写作模板与示例。</div>
+</div>
+
+<h2 contenteditable="false">四、文献综述（Literature Review）</h2>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>目的：界定概念、发现缺口、建立理论基础、避免重复、支撑方法选择。</li>
+    <li>结构：引言 → 理论综述（Theoretical Review）→ 实证综述（Empirical Review）→ 概念框架 → 文献缺口小结。</li>
+    <li><span class="term">理论框架 vs 概念框架</span>：理论框架来自既有理论；概念框架是自变量、因变量、中介变量、调节变量之间的关系图。</li>
+    <li>引用规范：APA 7th（课程常用），注意抄袭（Plagiarism）与 Turnitin 相似度要求。</li>
+  </ul>
+  <div class="todo">待补充：讲师要求的文献数量、年限与引用格式细则。</div>
+</div>
+
+<h2 contenteditable="false">五、研究设计（Research Design）</h2>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead>
+      <tr><th>类型</th><th>用途</th><th>常见做法</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>探索性 Exploratory</td><td>问题尚不清晰</td><td>访谈、焦点小组、文献</td></tr>
+      <tr><td>描述性 Descriptive</td><td>刻画现象「是什么」</td><td>横断面调查 Survey</td></tr>
+      <tr><td>解释性 / 因果 Explanatory</td><td>检验变量间因果</td><td>实验、回归分析</td></tr>
+      <tr><td>纵向 Longitudinal</td><td>随时间变化</td><td>面板数据、追踪研究</td></tr>
+    </tbody>
+  </table>
+  <p>其他维度：定量 / 定性 / 混合方法；横断面 vs 纵向；实验室 vs 实地；干预程度与研究情境。</p>
+  <div class="todo">待补充：课上讲的设计选择逻辑与案例。</div>
+</div>
+
+<h2 contenteditable="false">六、总体与抽样（Population &amp; Sampling）</h2>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><span class="term">总体 / 目标总体 / 抽样框（Sampling Frame）/ 样本单位</span>。</li>
+    <li><span class="term">概率抽样</span>：简单随机、系统、分层（Stratified）、整群（Cluster）、多阶段。</li>
+    <li><span class="term">非概率抽样</span>：便利、判断/立意（Purposive）、配额、雪球。</li>
+    <li><span class="term">样本量确定</span>：Yamane、Cochran、Krejcie &amp; Morgan 表；考虑置信水平、误差、总体方差、回收率。</li>
+  </ul>
+  <div class="formula">
+    Yamane（有限总体）：n = N / (1 + N·e²)　　例：N = 1000, e = 5% → n = 1000 / (1 + 1000×0.0025) = 286
+  </div>
+  <div class="formula">
+    Cochran（大总体，比例）：n₀ = Z²·p·q / e²　　p = 0.5, Z = 1.96, e = 5% → n₀ ≈ 384
+  </div>
+  <div class="todo">待补充：课上使用的公式版本与计算例题。</div>
+</div>
+
+<h2 contenteditable="false">七、测量与量表（Measurement &amp; Scaling）</h2>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><span class="term">四种测量尺度</span>：名义（Nominal）、序数（Ordinal）、等距（Interval）、等比（Ratio）—— 决定可用的统计方法。</li>
+    <li><span class="term">操作化（Operationalization）</span>：抽象概念 → 维度 → 具体指标 → 问卷题目。</li>
+    <li><span class="term">量表类型</span>：Likert、语义差异（Semantic Differential）、Stapel、等级排序、固定总和。</li>
+    <li><span class="term">效度（Validity）</span>：内容效度、表面效度、构念效度（收敛/区分）、准则效度；内部效度 vs 外部效度。</li>
+    <li><span class="term">信度（Reliability）</span>：Cronbach's α（≥0.7 可接受）、重测信度、折半信度、评分者间信度。</li>
+  </ul>
+  <div class="todo">待补充：课上对 α 阈值与效度检验步骤的具体要求。</div>
+</div>
+
+<h2 contenteditable="false">八、数据收集方法（Data Collection）</h2>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><span class="term">一手数据</span>：问卷（自填/访员）、访谈（结构化/半结构化/深度）、焦点小组、观察、实验。</li>
+    <li><span class="term">二手数据</span>：公司报表、行业报告、政府统计、数据库；优点是省时省钱，缺点是契合度与时效。</li>
+    <li><span class="term">问卷设计</span>：避免双重问题、引导性提问、专业术语；注意题序、过滤题、预调查（Pilot Test）。</li>
+    <li><span class="term">回收率与无应答偏差</span>（Non-response Bias）处理。</li>
+  </ul>
+  <div class="todo">待补充：课上示范的问卷片段与常见错误。</div>
+</div>
+
+<h2 contenteditable="false">九、数据处理与分析（Data Analysis）</h2>
+
+<div class="box" contenteditable="false">
+  <h3>定量分析</h3>
+  <ul>
+    <li>数据准备：编码、录入、清洗、缺失值与异常值处理、反向计分。</li>
+    <li>描述统计：频数、均值、中位数、标准差、偏度与峰度。</li>
+    <li>推断统计：t 检验、方差分析 ANOVA、卡方检验、相关分析（Pearson / Spearman）。</li>
+    <li>回归：简单与多元线性回归；R²、F 检验、t 检验、β 系数；假设检验（线性、正态、同方差、无多重共线性 VIF &lt; 10、无自相关 Durbin-Watson）。</li>
+    <li>工具：SPSS / Excel / Stata / R。</li>
+  </ul>
+  <h3>定性分析</h3>
+  <ul>
+    <li>内容分析（Content Analysis）、主题分析（Thematic Analysis）、编码（开放 → 主轴 → 选择性）、扎根理论。</li>
+    <li>可信度标准：可信性、可迁移性、可靠性、可确认性（Trustworthiness 四要素）。</li>
+  </ul>
+  <div class="todo">待补充：课上使用的软件操作步骤与输出解读。</div>
+</div>
+
+<h2 contenteditable="false">十、研究伦理（Research Ethics）</h2>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>知情同意（Informed Consent）、自愿参与、匿名与保密、不伤害原则。</li>
+    <li>数据的安全存储与使用限制；利益冲突披露。</li>
+    <li>学术诚信：抄袭、数据造假、重复发表；引用规范。</li>
+    <li>审批流程：机构伦理委员会（IRB / Ethics Review）、研究许可（如 NACOSTI 许可，肯尼亚）。</li>
+  </ul>
+  <div class="todo">待补充：学校对伦理审批与研究许可的具体要求。</div>
+</div>
+
+<h2 contenteditable="false">十一、研究计划书与报告写作（Proposal &amp; Report Writing）</h2>
+
+<div class="box" contenteditable="false">
+  <h3>研究计划书常见结构</h3>
+  <ol>
+    <li>封面、摘要、目录</li>
+    <li>第一章 引言：背景、问题陈述、研究目标、研究问题/假设、研究意义、范围与局限</li>
+    <li>第二章 文献综述：理论综述、实证综述、概念框架、文献缺口</li>
+    <li>第三章 研究方法：研究设计、总体与抽样、数据收集工具、效度与信度、数据分析方法、伦理考量</li>
+    <li>参考文献（APA）、附录（问卷、时间表、预算）</li>
+  </ol>
+  <p>最终报告在此基础上增加：第四章 结果与讨论、第五章 结论与建议。</p>
+  <div class="todo">待补充：讲师给出的模板、页数与格式要求。</div>
+</div>
+
+<h2 contenteditable="false">附：术语速查表</h2>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>英文</th><th>中文</th><th>要点</th></tr></thead>
+    <tbody>
+      <tr><td>Variable（Independent / Dependent / Moderating / Mediating / Extraneous）</td><td>变量（自变量 / 因变量 / 调节 / 中介 / 外生）</td><td>概念框架的构件</td></tr>
+      <tr><td>Hypothesis（H₀ / H₁）</td><td>假设（原假设 / 备择假设）</td><td>可检验的陈述</td></tr>
+      <tr><td>Type I / Type II Error</td><td>第一类 / 第二类错误</td><td>弃真 α / 存伪 β</td></tr>
+      <tr><td>p-value</td><td>显著性概率</td><td>p &lt; 0.05 拒绝 H₀</td></tr>
+      <tr><td>Triangulation</td><td>三角验证</td><td>多来源/多方法交叉印证</td></tr>
+      <tr><td>Pilot Study</td><td>预调查</td><td>检验工具的可行性与信度</td></tr>
+      <tr><td>Generalizability</td><td>可推广性</td><td>外部效度</td></tr>
+    </tbody>
+  </table>
+  <div class="todo">待补充：随课程增加新术语。</div>
+</div>
+
+<h2 contenteditable="false">课堂记录（按日期）</h2>
+
+<div class="box" contenteditable="false">
+  <div class="todo">每次课的原始记录、例题、老师原话放这里，之后再归入上面的章节。</div>
+</div>
+
+</div>
+
+<script>
+let editMode = false;
+const NOTES_VERSION = '2026-08-17-scaffold-v1';
+
+function toggleEdit() {
+  editMode = !editMode;
+  const btn = document.getElementById('editBtn');
+  const elements = document.querySelectorAll('#content [contenteditable]');
+  elements.forEach(el => {
+    el.setAttribute('contenteditable', editMode ? 'true' : 'false');
+  });
+  btn.textContent = editMode ? '🔒 退出编辑模式' : '✏️ 进入编辑模式';
+  showStatus(editMode ? '已进入编辑模式 — 点击任意位置即可修改' : '已退出编辑模式');
+}
+
+function saveNotes() {
+  const content = document.getElementById('content').innerHTML;
+  localStorage.setItem('mba8109_notes', content);
+  localStorage.setItem('mba8109_notes_version', NOTES_VERSION);
+  buildTOC();
+  showStatus('✅ 已保存到浏览器本地存储 (' + new Date().toLocaleTimeString() + ')');
+}
+
+function loadNotes() {
+  const saved = localStorage.getItem('mba8109_notes');
+  const savedVersion = localStorage.getItem('mba8109_notes_version');
+  if (saved && savedVersion === NOTES_VERSION) {
+    document.getElementById('content').innerHTML = saved;
+    showStatus('📂 已加载上次保存的笔记');
+  } else if (saved) {
+    // 保留旧版用户编辑，同时优先展示文件里的最新课程内容。
+    localStorage.setItem('mba8109_notes_backup', saved);
+    localStorage.removeItem('mba8109_notes');
+    localStorage.removeItem('mba8109_notes_version');
+    showStatus('🆕 已加载新版课程笔记；旧的本地编辑已备份');
+  }
+}
+
+function resetNotes() {
+  if (confirm('确定要重置为初始内容吗？保存的修改将丢失。')) {
+    localStorage.removeItem('mba8109_notes');
+    localStorage.removeItem('mba8109_notes_version');
+    location.reload();
+  }
+}
+
+function exportHTML() {
+  const html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>MBA 8109 笔记导出</title></head><body>' +
+               document.getElementById('content').innerHTML + '</body></html>';
+  const blob = new Blob([html], {type: 'text/html'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'MBA8109_Notes_' + new Date().toISOString().slice(0,10) + '.html';
+  a.click();
+  URL.revokeObjectURL(url);
+  showStatus('📥 已导出为 HTML 文件');
+}
+
+function showStatus(msg) {
+  const s = document.getElementById('status');
+  s.textContent = msg;
+  setTimeout(() => { s.textContent = ''; }, 3000);
+}
+
+// 自动生成目录（扫描 #content 内的 h2，支持编辑后重建）
+function buildTOC() {
+  const heads = document.querySelectorAll('#content h2');
+  const list = document.getElementById('tocList');
+  list.innerHTML = '';
+  heads.forEach((h, i) => {
+    const id = 'sec-' + i;
+    h.id = id;
+    h.classList.add('h2-anchor');
+    const text = h.textContent.trim();
+    // 以「问题/例题/附」等开头的视为子条目，缩进显示
+    const isSub = /^(问题|例题|引理|附|案例|练习题)/.test(text);
+    const li = document.createElement('li');
+    if (isSub) li.className = 'sub';
+    const a = document.createElement('a');
+    a.href = '#' + id;
+    a.textContent = (isSub ? '└ ' : '') + text;
+    a.onclick = (e) => {
+      e.preventDefault();
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + id);
+    };
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+}
+
+// 自动加载已保存的笔记，然后生成目录（互不阻塞：任一步出错不影响另一步）
+window.addEventListener('load', () => {
+  try { loadNotes(); } catch (e) { console.warn('loadNotes failed:', e); }
+  try { buildTOC(); } catch (e) { console.warn('buildTOC failed:', e); }
+});
+// 兜底：DOM 就绪时也先构建一次目录
+document.addEventListener('DOMContentLoaded', () => {
+  try { buildTOC(); } catch (e) {}
+});
+
+// 自动保存（每30秒）
+setInterval(() => {
+  if (editMode) saveNotes();
+}, 30000);
+</script>
+
+</body>
+</html>
