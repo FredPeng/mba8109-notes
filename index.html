@@ -139,6 +139,9 @@
   }
   #tocList li { margin: 4px 0; break-inside: avoid; }
   #tocList li.sub { padding-left: 16px; font-size: 0.92em; }
+  #tocList li.group { break-inside: avoid; margin-top: 10px; }
+  #tocList li.group > a { font-weight: 600; }
+  #tocList li.group > ul { list-style: none; padding: 0; margin: 2px 0 0 0; }
   #tocList a {
     color: #2c7a7b;
     text-decoration: none;
@@ -177,7 +180,11 @@
 <p contenteditable="false"><em>研究方法 — 课堂笔记</em></p>
 <p class="meta" contenteditable="false">Strathmore Business School · MBA</p>
 
-<h2 contenteditable="false">Why this course matters（这门课为什么重要）</h2>
+<h2 contenteditable="false">第一节课</h2>
+
+<p class="meta" contenteditable="false">2026-08-17</p>
+
+<h3 contenteditable="false">1. Why this course matters（这门课为什么重要）</h3>
 
 <div class="box" contenteditable="false">
   <p><strong>More than a unit on your transcript.</strong>（不只是成绩单上的一门课）</p>
@@ -193,11 +200,51 @@
   </ul>
 </div>
 
+<h3 contenteditable="false">2. The real stakes（真正的利害所在）</h3>
+
+<div class="box" contenteditable="false">
+  <p><strong>What happens after this course?</strong>（这门课之后会发生什么？）</p>
+  <ul>
+    <li>Passing this course <em>properly</em> is your ticket to supervisor allocation.<br>
+      <span class="meta">把这门课真正学好（而不是勉强及格），才是拿到导师分配的门票。</span></li>
+    <li>Strathmore allocates supervisors <strong>within one month</strong> of completing Research Methods.<br>
+      <span class="meta">Strathmore 在 Research Methods 结课后一个月内分配导师。</span></li>
+    <li>Struggle here, delay your Chapter 1, and that clock simply does not start.<br>
+      <span class="meta">这门课学不动、第一章拖着，那个一个月的计时根本不会开始。</span></li>
+  </ul>
+
+  <div class="note">
+    <strong>No solid research methods pass → No supervisor → No dissertation progress</strong><br>
+    <span class="meta">没有扎实通过研究方法 → 没有导师 → 论文毫无进展</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">3. Before we begin — Ground Rules（课堂规则）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>Be present and on time</strong> — 5:30pm sharp, every session.<br>
+      <span class="meta">每次课 5:30pm 准时到，不迟到。</span></li>
+    <li><strong>Come with your study interest</strong> — we work on real ideas, not hypotheticals.<br>
+      <span class="meta">带着自己的研究兴趣来，课上做真实的想法，不做假设性练习。</span></li>
+    <li><strong>Come with your PC always</strong>, do personal reading and practices.<br>
+      <span class="meta">每次都带电脑；课外自己阅读和练习。</span></li>
+    <li><strong>Deadlines are fixed</strong> — the CAT and concept-paper dates do not move.<br>
+      <span class="meta">截止日期不改：CAT 和 concept paper 的日期不会往后挪。</span></li>
+    <li><strong>Full participation</strong> — syndicate work is graded engagement, not attendance.<br>
+      <span class="meta">小组作业算的是参与质量的分，不是点名出勤。</span></li>
+    <li><strong>Zero tolerance for plagiarism</strong>, ethical use of AI from your very first paragraph.<br>
+      <span class="meta">抄袭零容忍；从第一段起就要合规使用 AI。</span></li>
+    <li><strong>Respect the room and FOCUS</strong> — computers open when required, phones down — only when necessary, full professional conduct.<br>
+      <span class="meta">尊重课堂、保持专注：需要时才开电脑，手机收起来，全程专业举止。</span></li>
+  </ul>
+</div>
+
 </div>
 
 <script>
 let editMode = false;
-const NOTES_VERSION = '2026-08-17-why-this-course-matters-v1';
+const NOTES_VERSION = '2026-08-17-lesson-01-v1';
 
 function toggleEdit() {
   editMode = !editMode;
@@ -260,9 +307,9 @@ function showStatus(msg) {
   setTimeout(() => { s.textContent = ''; }, 3000);
 }
 
-// 自动生成目录（扫描 #content 内的 h2，支持编辑后重建）
+// 自动生成目录（h2 = 每节课，h3 = 该节课下的小节，缩进显示；支持编辑后重建）
 function buildTOC() {
-  const heads = document.querySelectorAll('#content h2');
+  const heads = document.querySelectorAll('#content h2, #content h3');
   const list = document.getElementById('tocList');
   list.innerHTML = '';
   if (heads.length === 0) {
@@ -272,25 +319,36 @@ function buildTOC() {
     list.appendChild(li);
     return;
   }
+  // 每个 h2 连同它下面的 h3 打包成一组，避免分栏时父子被拆开
+  let group = null;
   heads.forEach((h, i) => {
     const id = 'sec-' + i;
     h.id = id;
     h.classList.add('h2-anchor');
-    const text = h.textContent.trim();
-    // 以「问题/例题/附」等开头的视为子条目，缩进显示
-    const isSub = /^(问题|例题|引理|附|案例|练习题)/.test(text);
-    const li = document.createElement('li');
-    if (isSub) li.className = 'sub';
+    const isSub = h.tagName === 'H3';
     const a = document.createElement('a');
     a.href = '#' + id;
-    a.textContent = (isSub ? '└ ' : '') + text;
+    a.textContent = (isSub ? '└ ' : '') + h.textContent.trim();
     a.onclick = (e) => {
       e.preventDefault();
       document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
       history.replaceState(null, '', '#' + id);
     };
-    li.appendChild(a);
-    list.appendChild(li);
+    if (isSub) {
+      const li = document.createElement('li');
+      li.className = 'sub';
+      li.appendChild(a);
+      // 开头就出现 h3（还没有 h2）时直接挂在顶层
+      (group || list).appendChild(li);
+    } else {
+      const wrap = document.createElement('li');
+      wrap.className = 'group';
+      wrap.appendChild(a);
+      const subList = document.createElement('ul');
+      wrap.appendChild(subList);
+      list.appendChild(wrap);
+      group = subList;
+    }
   });
 }
 
