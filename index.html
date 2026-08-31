@@ -108,6 +108,21 @@
   @media (max-width: 600px) {
     .flow .fcols { grid-template-columns: repeat(2, 1fr); }
   }
+  /* 横向链条 */
+  .chain { display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; margin: 12px 0; }
+  .chain > div {
+    flex: 1 1 0;
+    min-width: 120px;
+    background: #e6fffa;
+    border: 1px solid #81e6d9;
+    border-radius: 6px;
+    padding: 8px 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  .chain > div .cn { display: block; color: #718096; font-size: 0.82em; font-weight: normal; }
+  .chain .sep { flex: 0 0 auto; min-width: 0; background: none; border: none; color: #319795; align-self: center; font-weight: 400; }
   .toolbar {
     position: sticky;
     top: 0;
@@ -578,7 +593,289 @@
 
 <h2 contenteditable="false">第二节课</h2>
 
-<p class="meta" contenteditable="false">日期待补 · Session 2 — From Study Area to Chapter One（从研究领域到第一章）</p>
+<p class="meta" contenteditable="false">日期待补 · Session 2 — From Study Area to Chapter One（从研究领域到第一章）· <a href="Session2%20Study%20Area%20to%20Chapter%20One.pdf">课件 PDF</a></p>
+
+<h3 contenteditable="false">1. Today's Roadmap（今天的路线）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Study Area → Study Topic<span class="meta"> — 研究领域 → 研究选题</span></li>
+    <li>Background of the Study<span class="meta"> — 研究背景</span></li>
+    <li>Problem Statement<span class="meta"> — 问题陈述</span></li>
+    <li>Objectives, Questions &amp; Hypotheses<span class="meta"> — 目标、问题与假设</span></li>
+    <li>Justification &amp; Scope<span class="meta"> — 意义与范围</span></li>
+    <li>Operational Definitions + Checklist<span class="meta"> — 操作性定义 + 检查清单</span></li>
+  </ul>
+  <div class="answer">
+    By the end: you can draft every section of your Chapter 1, section by section.<br>
+    <span class="meta" style="font-weight:normal;">上完这节课，你能一节一节把第一章全部写出来。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">2. Getting the vocabulary right — Study Area vs Study Topic（先把词用对）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>STUDY AREA（研究领域）</th><th>STUDY TOPIC（研究选题）</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>The broad field you're drawn to — e.g. "digital banking", "SME access to credit", "employee retention".<br>
+          <span class="meta">你被吸引的宽泛领域。</span></td>
+        <td><strong>ONE bounded, answerable question</strong> inside that area — with <strong>population, context and variables</strong> named.<br>
+          <span class="meta">该领域内一个有边界、能回答的问题，且点明了对象、情境和变量。</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="quote">
+    Area: "Employee turnover" → Topic: "Effect of career development practices on employee turnover among ICT staff at [organisation]"
+  </div>
+</div>
+
+<h3 contenteditable="false">Read this before you commit — Why topic selection deserves your full attention（定题之前先读这页）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>A weak topic reveals its flaws <strong>only after you've invested months</strong> in it.<br>
+      <span class="meta">烂选题的毛病，往往在你投进去几个月之后才暴露。</span></li>
+    <li>Supervisor allocation is <strong>matched to your topic</strong> and its area of expertise.<br>
+      <span class="meta">导师是按你的选题和其专长来配的。</span></li>
+    <li>Access and ethical issues surface <strong>AFTER</strong> you've committed — rarely before.<br>
+      <span class="meta">调研入口和伦理问题通常在你定下来之后才冒出来。</span></li>
+    <li>Restarting mid-way means redoing literature — sometimes redoing ethics clearance too.<br>
+      <span class="meta">中途重来意味着文献重做，有时伦理审批也要重来。</span></li>
+  </ul>
+  <div class="answer">
+    The topic you choose in Week 2 is the topic you defend in Month 8. Choose it carefully.<br>
+    <span class="meta" style="font-weight:normal;">第二周选的题，就是第八个月要答辩的题。慎重选。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">3. Before you narrow down — Appropriateness, Capability and Fulfilment（收窄之前要考虑什么）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>Feasibility</strong> — doable within your time and access.<br>
+      <span class="meta">可行性：在你的时间和资源可及范围内做得完。</span></li>
+    <li>Genuine personal or professional interest.<br>
+      <span class="meta">真实的个人或职业兴趣。</span></li>
+    <li>A clear contribution — <strong>not already conclusively answered</strong>.<br>
+      <span class="meta">有明确贡献——不是已经被彻底回答过的问题。</span></li>
+    <li><strong>Data availability</strong> — will people/records really be reachable?<br>
+      <span class="meta">数据可得性：人和记录是不是真的够得着？</span></li>
+    <li>Fit with your organisation's or sector's realities.<br>
+      <span class="meta">与你所在组织或行业的现实相符。</span></li>
+    <li>Alignment with recognised business/management research areas.<br>
+      <span class="meta">落在公认的商业／管理研究领域内。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">4. The path from area to topic — The Narrowing Funnel（收窄漏斗）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>Broad Area<span class="cn">宽泛领域</span></div>
+    <div class="sep">→</div>
+    <div>Sector / Field<span class="cn">行业／细分领域</span></div>
+    <div class="sep">→</div>
+    <div>Specific Problem<span class="cn">具体问题</span></div>
+    <div class="sep">→</div>
+    <div>Researchable Topic<span class="cn">可研究的选题</span></div>
+  </div>
+  <p>Each stage gets narrower — and more specific — than the last. You should be able to name where you are on this line right now.<br>
+    <span class="meta">每一步都比上一步更窄、更具体；你应该能立刻说出自己现在在这条线的哪一段。</span></p>
+  <div class="answer">
+    If you cannot draw your own funnel in 60 seconds, your area is still too broad.<br>
+    <span class="meta" style="font-weight:normal;">如果你 60 秒内画不出自己的漏斗，说明领域还是太宽。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">5. Run this test on your own topic — Is My Topic Ready?（自测：选题到位了吗）</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li>Can I state it in <strong>ONE sentence</strong>?<span class="meta"> — 能用一句话说清吗？</span></li>
+    <li>Can I <strong>access the data</strong> within my timeline?<span class="meta"> — 在我的时间表内拿得到数据吗？</span></li>
+    <li>Has it already been <strong>conclusively answered</strong>?<span class="meta"> — 是不是已经被彻底回答过了？</span></li>
+    <li>Is it <strong>MBA-level — bounded — not PhD-scale</strong>?<span class="meta"> — 是 MBA 的体量、有边界，而不是博士级的规模？</span></li>
+  </ol>
+</div>
+
+<h3 contenteditable="false">6. Section 1.1 — Background of the Study: Purpose &amp; Structure（研究背景：目的与结构）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>GLOBAL<span class="cn">全球</span></div>
+    <div class="sep">→</div>
+    <div>REGIONAL<span class="cn">区域</span></div>
+    <div class="sep">→</div>
+    <div>LOCAL<span class="cn">本地</span></div>
+  </div>
+  <ul>
+    <li><strong>Purpose</strong>: to <strong>situate your problem</strong> — not to review literature.<br>
+      <span class="meta">目的是给问题定位，不是做文献综述。</span></li>
+    <li>Move Global → Regional → Local, each in its own clear section.<br>
+      <span class="meta">按全球→区域→本地推进，每层各自成节。</span></li>
+    <li>Weave in scholarly perspective only as <strong>context-setting introduction</strong>.<br>
+      <span class="meta">学术观点只作为铺陈背景的引子穿插进来。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">7. Identifying your variables in the background（读者第一次接触你的研究：在背景里点明变量）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>Name your key variables explicitly</strong> — as they apply in YOUR study. These should be identified from your study topic.<br>
+      <span class="meta">明确点出关键变量，且是在你这项研究里的含义；变量应当从你的选题里提取出来。</span></li>
+    <li>Show how each variable <strong>actually behaves or is discussed in your sector</strong>（manifestation in your study）.<br>
+      <span class="meta">说明每个变量在你所在行业里究竟怎么表现、怎么被讨论。</span></li>
+    <li>This is where your reader first meets the concepts your study will measure — <strong>and the key construct that will build into your specific objectives</strong>.<br>
+      <span class="meta">这里是读者第一次见到你要测量的概念，也是日后长成具体目标的核心构念。</span></li>
+  </ul>
+  <div class="note">
+    A background that never names its variables leaves the reader guessing what the study is actually about.<br>
+    <span class="meta">背景里不点变量，读者只能猜你到底在研究什么。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">7b. Variables of the Study: Types and How to Spot Them（变量的类型与识别方法）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>类型</th><th>作用</th><th>Spot it（怎么认出来）</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Independent Variable (IV)</strong><br><span class="meta">自变量</span></td>
+        <td>The presumed cause you manipulate.<br><span class="meta">被认定的原因，你操纵的那一个。</span></td>
+        <td>the "effect of ___" half<br><span class="meta">题目里"…的影响"前半截</span></td></tr>
+      <tr><td><strong>Dependent Variable (DV)</strong><br><span class="meta">因变量</span></td>
+        <td>The outcome that changes in response.<br><span class="meta">随之变化的结果。</span></td>
+        <td>the "…on Y" half<br><span class="meta">"对 Y 的影响"后半截</span></td></tr>
+      <tr><td><strong>Moderating</strong><br><span class="meta">调节变量</span></td>
+        <td>Alters the strength or direction of the IV–DV relationship.<br><span class="meta">改变自变量—因变量关系的强度或方向。</span></td>
+        <td>"depends on…" cues<br><span class="meta">"取决于…"</span></td></tr>
+      <tr><td><strong>Mediating / Intervening</strong><br><span class="meta">中介变量</span></td>
+        <td>Explains <em>how</em> the IV produces the DV — it sits between them.<br><span class="meta">解释自变量如何produce因变量，夹在两者之间。</span></td>
+        <td>"through…", "because of…"<br><span class="meta">"通过…""因为…"</span></td></tr>
+      <tr><td><strong>Control</strong><br><span class="meta">控制变量</span></td>
+        <td>Held constant so it cannot distort the relationship you test.<br><span class="meta">保持恒定，免得扭曲你要检验的关系。</span></td>
+        <td>what you hold constant<br><span class="meta">你固定住的东西</span></td></tr>
+      <tr><td><strong>Extraneous / Confounding</strong><br><span class="meta">外生／混淆变量</span></td>
+        <td>Outside your model, yet able to move the DV and mislead you.<br><span class="meta">在模型之外，却能影响因变量、把你带偏。</span></td>
+        <td>rival explanations<br><span class="meta">竞争性解释</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    Name the type, not just the variable — examiners check that your objectives test the relationship you claim.<br>
+    <span class="meta">不只是列出变量，还要说清它是哪一类——评阅人会核对你的目标是否真的在检验你声称的那层关系。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">8. Introducing the Study: Site, Situation &amp; Sector（把研究落在真实的地方）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Describe the <strong>institution or sector</strong> under study, and its operations.<br>
+      <span class="meta">描述研究对象所在的机构或行业，以及它怎么运作。</span></li>
+    <li>Clarify the <strong>situation</strong> that makes this site relevant to your variables.<br>
+      <span class="meta">说清是什么情况让这个场景与你的变量相关。</span></li>
+    <li>Ground the reader in a <strong>concrete, real context</strong> — never an abstract one.<br>
+      <span class="meta">给读者一个具体真实的情境，不要抽象化。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">What examiners flag most often — Background Pitfalls to Avoid（评阅人最常挑的背景毛病）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Citing scholars' views <strong>as if writing a literature review</strong>, not a background.<br>
+      <span class="meta">把背景写成了文献综述，堆学者观点。</span></li>
+    <li>No clear <strong>Global → Regional → Local</strong> structure or sections.<br>
+      <span class="meta">没有清晰的全球→区域→本地结构和分节。</span></li>
+    <li><strong>Key variables mentioned nowhere</strong> in the background.<br>
+      <span class="meta">背景里根本没提关键变量。</span></li>
+    <li><strong>Three-line paragraphs</strong> instead of fully developed ones.<br>
+      <span class="meta">三行一段的碎片，而不是完整展开的段落。</span></li>
+  </ul>
+  <div class="note">
+    Every one of these is a direct line item on the Chapter 1 checklist you'll use to self-review (Section G).<br>
+    <span class="meta">这四条每一条都直接对应第一章自查清单（Section G）上的条目。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">9. Section 1.2 — Problem Statement: What It Is（问题陈述是什么）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>WHAT IT IS（是什么）</th><th>WHAT IT IS NOT（不是什么）</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>The specific <strong>gap, tension or unresolved issue</strong> your study addresses — named in your own words, in one place.<br>
+          <span class="meta">你这项研究要处理的具体缺口／张力／未解问题，用你自己的话、集中在一处说明。</span></td>
+        <td><strong>Not the background.</strong> The background sets the stage; the problem statement names the gap that stage exposes.<br>
+          <span class="meta">不是研究背景。背景搭台，问题陈述点出台上暴露的那个缺口。</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>Fit for purpose</strong>：the statement must suit the mode of inquiry you have chosen — qualitative or quantitative.<br>
+    <span class="meta">问题陈述要配得上你选的研究方式（定性还是定量）。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">9b. From boardroom pain to researchable gap（把商业痛点变成学术问题）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>BUSINESS PAIN<span class="cn">商业痛点：组织感受到的症状——流失、违约、推行不下去</span></div>
+    <div class="sep">→</div>
+    <div>EVIDENCE OF A GAP<span class="cn">缺口的证据：有文献证明痛点持续存在且尚未被解释</span></div>
+    <div class="sep">→</div>
+    <div>SCHOLARLY PROBLEM<span class="cn">学术问题：一段尚无定论的变量关系，为探究而设，不为行动</span></div>
+  </div>
+
+  <table>
+    <thead><tr><th>SAYS THE MANAGER（经理会说）</th><th>SAYS THE SCHOLAR（学者会说）</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>"Our turnover is too high and HR must fix it this year."</td>
+        <td>"The effect of career development practices on turnover among ICT staff remains unestablished in this context."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="answer">
+    The test: if the answer is a <strong>decision</strong>, it is a business case. If the answer is <strong>evidence about a relationship</strong>, it is a research problem.<br>
+    <span class="meta" style="font-weight:normal;">判别方法：答案若是"一个决定"，那是商业议题；答案若是"关于某种关系的证据"，才是研究问题。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">9c. Writing the Problem Statement: Four Moves（先识别，再陈述：四步走）</h3>
+
+<div class="box" contenteditable="false">
+  <h4>HOW TO IDENTIFY ONE（怎么识别出一个问题）</h4>
+  <ul>
+    <li><strong>Persistent, documented symptom</strong> — not a one-off complaint.<br>
+      <span class="meta">持续且有记录的症状，不是一次性的抱怨。</span></li>
+    <li>Conflicting or thin evidence in the literature.<br>
+      <span class="meta">文献里的证据互相矛盾或者很薄。</span></li>
+    <li>Data you can <strong>realistically reach</strong> within your timeline.<br>
+      <span class="meta">在时间表内你确实拿得到的数据。</span></li>
+    <li><strong>An unexplained relationship</strong> — not a missing decision.<br>
+      <span class="meta">一段没被解释清楚的关系，而不是一个还没做的决定。</span></li>
+  </ul>
+
+  <h4>THE FOUR MOVES（四步）</h4>
+  <ol>
+    <li><strong>CONTEXT</strong> — "In [setting], X matters because…"<span class="meta"> — 情境</span></li>
+    <li><strong>EVIDENCE</strong> — "Studies show…, yet…"<span class="meta"> — 证据</span></li>
+    <li><strong>GAP</strong> — "What remains unknown is…"<span class="meta"> — 缺口</span></li>
+    <li><strong>CONSEQUENCE</strong> — "Without this evidence, …"<span class="meta"> — 后果</span></li>
+  </ol>
+
+  <h4>ONE-SENTENCE TEMPLATE（一句话模板）</h4>
+  <div class="formula">
+    Despite [evidence of the symptom], [the gap] remains unexamined in [context]; this study therefore examines the effect of [IV] on [DV] among [population].
+  </div>
+</div>
 
 <h3 contenteditable="false">10. Building it step by step — How to formulate a problem statement（怎么写问题陈述）</h3>
 
@@ -595,7 +892,7 @@
   </ol>
 </div>
 
-<h3 contenteditable="false">11. The test examiners apply — Qualities of a good problem statement（评阅人怎么检验：好的问题陈述长什么样）</h3>
+<h3 contenteditable="false">11. The test examiners apply — Qualities of a good problem statement（评阅人怎么检验）</h3>
 
 <div class="box" contenteditable="false">
   <ul>
@@ -605,16 +902,27 @@
       <span class="meta">范围要窄——不是把整个领域的问题一锅端。</span></li>
     <li><strong>Situated within, and supported by, the literature</strong>.<br>
       <span class="meta">在文献中有定位，并有文献支撑。</span></li>
+    <li><strong>Matched to a qualitative or quantitative approach</strong>, and feasible to investigate.<br>
+      <span class="meta">与定性或定量的路径相匹配，并且实际可调查。</span></li>
   </ul>
 </div>
 
 <h3 contenteditable="false">12. What must be present — Key sections of a problem statement（问题陈述必须包含哪些部分）</h3>
 
 <div class="box" contenteditable="false">
-  <div class="note">内容待补。</div>
+  <ul>
+    <li>The <strong>gap or tension</strong> being addressed, stated plainly.<br>
+      <span class="meta">直白说出要处理的缺口或张力。</span></li>
+    <li><strong>Evidence that the gap exists</strong> — cited, not assumed.<br>
+      <span class="meta">缺口存在的证据——要引用，不能靠假设。</span></li>
+    <li>Why existing knowledge or practice <strong>has not yet resolved it</strong>.<br>
+      <span class="meta">为什么现有知识或实践还没能解决它。</span></li>
+    <li>A <strong>bridge sentence</strong> leading into your purpose and objectives.<br>
+      <span class="meta">一句过渡，引向你的研究目的与目标。</span></li>
+  </ul>
 </div>
 
-<h3 contenteditable="false">13. Section 1.3 of your chapter one — Research objectives: General &amp; Specific（研究目标：总目标与具体目标）</h3>
+<h3 contenteditable="false">13. Section 1.3 — Research objectives: General &amp; Specific（研究目标：总目标与具体目标）</h3>
 
 <div class="box" contenteditable="false">
   <h4>General Objective（总目标）</h4>
@@ -622,18 +930,170 @@
     <span class="meta">整项研究的总体目的，用一句话说清。</span></p>
 
   <h4>Specific Objectives（具体目标）</h4>
-  <ul>
-    <li>Specific Objective 1</li>
-    <li>Specific Objective 2</li>
-    <li>Specific Objective 3</li>
-  </ul>
   <p><strong>Measurable steps</strong> that together deliver the general objective. Each one resurfaces in your literature review, methodology and findings chapters.<br>
     <span class="meta">一个个可衡量的步骤，合起来实现总目标。每一条都会在文献综述、研究方法、研究发现各章里再次出现。</span></p>
-
-  <div class="note">这是 chapter one 的 <strong>1.3 节</strong>。</div>
 </div>
 
+<h3 contenteditable="false">13b. Deriving Specific Objectives from Your Variables（从变量推出具体目标：一个总目标 + 3–6 个具体目标）</h3>
 
+<div class="box" contenteditable="false">
+  <h4>GENERAL OBJECTIVE（示范）</h4>
+  <div class="quote">To examine the effect of career development practices on employee turnover among ICT staff at [organisation].</div>
+
+  <table>
+    <thead><tr><th>#</th><th>变量角色</th><th>Specific Objective</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>IV → DV</td><td>To determine the effect of <strong>training opportunities</strong> on employee turnover.</td></tr>
+      <tr><td>2</td><td>IV → DV</td><td>To assess the effect of <strong>career pathing</strong> on employee turnover.</td></tr>
+      <tr><td>3</td><td>IV → DV</td><td>To examine the effect of <strong>mentorship</strong> on employee turnover.</td></tr>
+      <tr><td>4</td><td>MODERATING</td><td>To establish whether <strong>supervisor support</strong> moderates the training–turnover relationship.</td></tr>
+      <tr><td>5</td><td>INTERVENING</td><td>To determine whether <strong>job satisfaction</strong> mediates the career pathing–turnover relationship.</td></tr>
+      <tr><td>6</td><td>CONFOUNDING</td><td>To assess the influence of <strong>external pay competitiveness</strong> on employee turnover.</td></tr>
+    </tbody>
+  </table>
+  <div class="note">每一条具体目标都对应 7b 里的一种变量角色——这就是"变量 → 目标"的落地方式。</div>
+</div>
+
+<h3 contenteditable="false">14. Section 1.4 — Research Questions: Quality Criteria（研究问题的质量标准）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>Directly answerable</strong> through the data you plan to collect.<br>
+      <span class="meta">能用你计划收集的数据直接回答。</span></li>
+    <li><strong>Focused, not broad</strong> — one idea per question.<br>
+      <span class="meta">聚焦不宽泛——一个问题只装一个意思。</span></li>
+    <li><strong>In sync with, and numbered to match, your objectives.</strong><br>
+      <span class="meta">与研究目标一一对应，编号也要对上。</span></li>
+    <li>Capable of shedding real light on the stated problem.<br>
+      <span class="meta">确实能照亮你陈述的那个问题。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">15. Section 1.4（定量研究）— Research Hypotheses: When &amp; How（研究假设：何时用、怎么写）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Needed for <strong>quantitative studies testing a relationship</strong> between variables.<br>
+      <span class="meta">检验变量间关系的定量研究才需要假设。</span></li>
+    <li>Stated as <strong>testable propositions</strong> — not phrased as questions.<br>
+      <span class="meta">写成可检验的命题，不要写成问句。</span></li>
+    <li>Framed in <strong>null and/or alternative</strong> form, as your design requires.<br>
+      <span class="meta">按研究设计的需要写成原假设和／或备择假设。</span></li>
+    <li>Must <strong>align exactly</strong> with the objectives and variables already named.<br>
+      <span class="meta">必须与已经点明的目标和变量严丝合缝地对齐。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">16. Strong Alignment, Start to Finish（第一章被查得最多的一项：全程对齐）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>Problem<span class="cn">问题</span></div>
+    <div class="sep">→</div>
+    <div>Purpose<span class="cn">目的</span></div>
+    <div class="sep">→</div>
+    <div>Objectives<span class="cn">目标</span></div>
+    <div class="sep">→</div>
+    <div>Questions / Hypotheses<span class="cn">研究问题／假设</span></div>
+  </div>
+  <div class="answer">
+    If a reader can't trace a straight line from your problem to your last research question, the alignment has failed.<br>
+    <span class="meta" style="font-weight:normal;">如果读者没法从你的问题一条直线连到最后一个研究问题，对齐就是失败的。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">17. Section 1.6 — Justification &amp; Significance of the Study（研究的意义）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Make an <strong>explicit case for why this research matters, now</strong>.<br>
+      <span class="meta">明确论证这项研究为什么在当下重要。</span></li>
+    <li>Show its contribution <strong>to the knowledge base and/or to practice</strong>.<br>
+      <span class="meta">说明它对知识体系和／或实践的贡献。</span></li>
+    <li>Mirror the structure <strong>Strathmore expects</strong> in this section — check completed examples.<br>
+      <span class="meta">按 Strathmore 期待的结构写，去看已完成的范例。</span></li>
+    <li><strong>Support every claim</strong> of importance — don't just assert it.<br>
+      <span class="meta">每一句"重要"都要有支撑，不能光宣称。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">18. Section 1.5 — Scope of the Study（研究范围）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>State clearly <strong>what the study covers</strong> — and, briefly, what it does not.<br>
+      <span class="meta">讲清研究覆盖什么，并简要说明不覆盖什么。</span></li>
+    <li>Bound it by <strong>population, geography, time period and variables</strong>.<br>
+      <span class="meta">用对象、地域、时间段、变量四个维度划定边界。</span></li>
+    <li>Keep it consistent with what your objectives can <strong>realistically deliver</strong>.<br>
+      <span class="meta">与你的目标实际能完成的范围保持一致。</span></li>
+  </ul>
+  <div class="note">课件里第 17 页讲 1.6、第 18 页才讲 1.5，顺序和小节号是反的——写的时候按 1.5 → 1.6 排。</div>
+</div>
+
+<h3 contenteditable="false">19. Section 1.7 — Operational Definition of Terms（术语的操作性定义）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Define <strong>only terms that do not have a commonly understood meaning</strong> but are key in your study.<br>
+      <span class="meta">只定义那些没有公认含义、但对你的研究很关键的术语。</span></li>
+    <li>Support each definition with an <strong>authoritative, cited source</strong>.<br>
+      <span class="meta">每条定义都要有权威出处并注明引用。</span></li>
+    <li>State how the term is <strong>specifically used and measured in YOUR study</strong>.<br>
+      <span class="meta">说明该术语在你的研究里具体怎么用、怎么测。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">20.（课件里没有这一页）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="note">deck 编号从 19 跳到 21，没有第 20 页。</div>
+</div>
+
+<h3 contenteditable="false">21. Chapter 1 Checklist — Part 2: Structure, Language &amp; Referencing（提交前自查清单）</h3>
+
+<div class="box" contenteditable="false">
+  <h4>内容与结构</h4>
+  <ul>
+    <li>Background moves <strong>Global → Regional → Local</strong>, in clear, separate sections.</li>
+    <li><strong>Key variables are named and applied</strong> — not just mentioned in passing.</li>
+    <li>The <strong>institution or sector and its operations</strong> are described.</li>
+    <li>The problem is <strong>clear, narrow, evidenced and situated</strong> in the literature.</li>
+    <li>There is <strong>strong alignment</strong> among problem, purpose, objectives and research questions.</li>
+  </ul>
+
+  <h4>格式、语言与引用</h4>
+  <ul>
+    <li>Every section is numbered with clear levels: <strong>1.2, 1.2.1, 1.2.1.1</strong>.</li>
+    <li>Paragraphs are <strong>fully formed</strong> — not three-line fragments.</li>
+    <li>Language matches your <strong>qualitative/quantitative</strong> approach throughout.</li>
+    <li>Every claim is referenced in <strong>APA</strong> — no paragraph left without a citation.</li>
+    <li>Checked against Strathmore's own <strong>program-specific variations</strong> for Chapter 1.</li>
+  </ul>
+
+  <div class="note">
+    Use the full <strong>JO Chapter 1 Checklist</strong> as your personal pre-submission audit — every time, not just once.<br>
+    <span class="meta">这是 Part 2；课件标题写着 PART 2，Part 1 不在这份 deck 里。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">22. Before we break — Recap and Next Steps（收尾：回顾与下一步）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>COVERED TODAY</strong>：Topic selection, background, problem statement, objectives, questions, hypotheses, justification, scope and definitions.<br>
+      <span class="meta">今天讲了：选题、背景、问题陈述、目标、研究问题、假设、意义、范围、定义。</span></li>
+    <li><strong>BEFORE NEXT SESSION</strong>：Bring a full first-attempt draft of your Background and Problem Statement, objectives, research questions and/or hypothesis.<br>
+      <span class="meta">下次课前：带一份完整的初稿——背景、问题陈述、目标、研究问题和／或假设。</span></li>
+    <li><strong>SELF-REVIEW FIRST</strong>：Run the Chapter 1 Checklist on your own draft <em>before</em> you bring it — not after.<br>
+      <span class="meta">先自查：把第一章清单在自己稿子上跑一遍再带来，不是带来之后再查。</span></li>
+  </ul>
+
+  <div class="answer">
+    See you next session — come with a draft, not just a topic.<br>
+    <span class="meta" style="font-weight:normal;">下次课带稿子来，不是只带一个题目。</span>
+  </div>
+</div>
 
 <h2 contenteditable="false">作业 · Syndicate Work — Consolidated Review of SU+ Dissertations</h2>
 
@@ -813,7 +1273,7 @@
 
 <script>
 let editMode = false;
-const NOTES_VERSION = '2026-08-31-session1-pdf-merged-v1';
+const NOTES_VERSION = '2026-08-31-session2-full-v1';
 
 function toggleEdit() {
   editMode = !editMode;
