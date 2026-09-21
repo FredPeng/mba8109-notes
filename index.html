@@ -206,6 +206,16 @@
   .onion .lay { font-weight: 600; color: #285e61; }
   .onion .opt { color: #4a5568; font-size: 0.9em; }
   .onion .core { background: #b2f5ea !important; border-color: #4fd1c5 !important; text-align: center; }
+  /* bars & quadrant */
+  .bars .row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 0.9em; }
+  .bars .lbl { width: 110px; flex: none; }
+  .bars .track { flex: 1; display: flex; height: 22px; border-radius: 4px; overflow: hidden; border: 1px solid #cbd5e0; }
+  .bars .q { background: #319795; color: #fff; text-align: center; line-height: 22px; font-size: 0.85em; }
+  .bars .ql { background: #f6ad55; color: #222; text-align: center; line-height: 22px; font-size: 0.85em; }
+  .quad { display: grid; grid-template-columns: 90px 1fr 1fr; grid-template-rows: auto 1fr 1fr auto; gap: 6px; margin: 12px 0; }
+  .quad .cell { border: 2px solid #81e6d9; border-radius: 8px; padding: 12px; text-align: center; background: #f0fdfa; min-height: 70px; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+  .quad .cell.hl { background: #b2f5ea; border-color: #319795; }
+  .quad .ax { font-size: 0.8em; color: #718096; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 600; letter-spacing: .05em; }
   table.checklist td:first-child, table.checklist th:first-child { width: 36px; text-align: center; }
   table.checklist th:nth-child(3), table.checklist td:nth-child(3) { width: 80px; }
   table.checklist th:nth-child(4), table.checklist td:nth-child(4) { width: 160px; }
@@ -2023,10 +2033,348 @@
   </div>
 </div>
 
+<h2 contenteditable="false">第四节课</h2>
+
+<p class="meta" contenteditable="false">Week 4 · Understanding Research Philosophies and Approaches（研究哲学与研究路径）· <a href="Session5%20Research%20Philosophies.pdf">课件 PDF（28 页）</a><br>
+  课前阅读：Saunders, Lewis &amp; Thornhill（9th ed.）Chapter 4, pp. 128–175。（文件名写的是 Session5，但封面标的是 Week 4。）</p>
+
+<h3 contenteditable="false">1. Learning Objectives（本节学习目标）</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li><strong>Compare</strong> positivism, interpretivism, pragmatism and realism as research philosophies.<span class="meta"> 比较四种研究哲学</span></li>
+    <li><strong>Justify</strong> a research philosophy appropriate to a given business topic.<span class="meta"> 为具体商科选题论证合适的研究哲学</span></li>
+    <li><strong>Distinguish</strong> deductive, inductive and abductive approaches, and match each to a type of study.<span class="meta"> 区分演绎、归纳、溯因三种路径并对应到研究类型</span></li>
+  </ol>
+  <p class="meta">课堂活动：Philosophy diagnostic exercise（哲学诊断练习），用在每个人自己的选题上。</p>
+</div>
+
+<h3 contenteditable="false">Part 1.1 — The Research Onion: Why Philosophy Comes First（为什么哲学要先于方法）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Saunders et al. picture research as an onion: method, data collection and analysis sit at the centre, but <strong>several layers of assumption must be peeled back</strong> to get there.<br>
+      <span class="meta">方法、数据收集和分析在洋葱中心，要先剥开外面几层假定才能到达。</span></li>
+    <li>It is tempting to start by asking <em>"should I use a questionnaire or interviews?"</em> — but that question <strong>belongs deep inside the onion, not at its surface</strong>.<br>
+      <span class="meta">"用问卷还是访谈"是洋葱最里层的问题，不该是第一个问题。</span></li>
+    <li>The outer layers are <strong>taken-for-granted assumptions</strong> about how the world works — making them explicit lets you examine, question and defend them.<br>
+      <span class="meta">外层是你习以为常的世界观；把它们说出来，才能审视和辩护。</span></li>
+    <li>Every RQ could in principle be studied from more than one position — the onion is <strong>a guide to making a deliberate choice, not a rigid formula</strong>.<br>
+      <span class="meta">洋葱是帮你有意识地做选择，不是死公式。</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">Part 1.2 — The Research Onion: Six Layers to Peel Back（洋葱的六层）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="onion">
+    <div><span class="lay">1 Philosophy 研究哲学</span> <span class="opt">— Positivism, realism, interpretivism, pragmatism</span>
+      <div><span class="lay">2 Approach to Theory Development 理论发展路径</span> <span class="opt">— Deductive, inductive, abductive</span>
+        <div><span class="lay">3 Methodological Choice 方法论选择</span> <span class="opt">— Quantitative, qualitative, or mixed methods</span>
+          <div><span class="lay">4 Strategies 研究策略</span> <span class="opt">— Survey, case study, experiment, action research…</span>
+            <div><span class="lay">5 Time Horizon 时间跨度</span> <span class="opt">— Cross-sectional or longitudinal</span>
+              <div class="core"><span class="lay">6 Techniques &amp; Procedures</span><br><span class="opt">Data collection and analysis — the very centre</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="note">和第五节课的洋葱对照：第 3 层这里叫 <strong>Methodological Choice（定量／定性／混合）</strong>，第五节课叫 <strong>Choices（mono／multi／mixed）</strong>——两种切法都来自 Saunders，第五节课的切法更细，把"多元方法"单列出来了。</div>
+</div>
+
+<h3 contenteditable="false">Part 1.3 — The Three Pillars of a Research Philosophy（研究哲学的三根支柱）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>支柱</th><th>关于什么</th><th>Guiding Question（自问）</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ontology</strong><span class="meta"><br>本体论</span></td><td>The nature of reality<br><span class="meta">现实是什么</span></td><td>What do I believe reality actually is — <strong>a fixed external fact, or something socially constructed</strong>?<br><span class="meta">现实是固定的外部事实，还是社会建构的？</span></td></tr>
+      <tr><td><strong>Epistemology</strong><span class="meta"><br>认识论</span></td><td>What counts as knowledge<br><span class="meta">什么算知识</span></td><td>What kind of <strong>evidence</strong> am I willing to accept as credible knowledge in my field?<br><span class="meta">我愿意接受什么样的证据为可信知识？</span></td></tr>
+      <tr><td><strong>Axiology</strong><span class="meta"><br>价值论</span></td><td>The role of values<br><span class="meta">价值的作用</span></td><td>How far do <strong>my own values</strong> shape what I study and how I interpret it?<br><span class="meta">我自己的价值观在多大程度上影响研究什么、怎么解读？</span></td></tr>
+    </tbody>
+  </table>
+  <p class="meta">这三者合称研究范式的 metaphysical assumptions（形而上假定），共同构成你带进每项研究的哲学立场。</p>
+</div>
+
+<h3 contenteditable="false">Part 1.4 — Ontology in Practice: Objectivism vs. Subjectivism（本体论：客观主义 vs 主观主义）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Objectivism 客观主义</th><th>Subjectivism 主观主义</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul>
+          <li>Social entities（"the organisation", "the manager"）exist as <strong>facts, external to and independent of</strong> the people within them.</li>
+          <li>Structures, roles and systems have a reality of their own, largely unaffected by who occupies them.</li>
+          <li>The <strong>"resources" researcher</strong> — comfortable treating organisational facts like objects: countable, measurable, external.</li>
+        </ul></td>
+        <td><ul>
+          <li>Social phenomena are <strong>produced by the perceptions and actions of the people involved</strong> — they do not exist "out there".</li>
+          <li>Concepts like "organisational culture" or "leadership" are <strong>continuously constructed and reconstructed</strong> through social interaction.</li>
+          <li>The <strong>"feelings" researcher</strong> — concerned with meanings, attitudes and lived experience rather than fixed facts.</li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">Part 2.1 — Four Philosophies at a Glance（四种研究哲学一览）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <tbody>
+      <tr><td><strong>P · Positivism</strong><span class="meta"> 实证主义</span></td><td>Studies observable social reality <strong>the way a natural scientist would</strong>, aiming for law-like generalisations.</td></tr>
+      <tr><td><strong>R · Realism</strong><span class="meta"> 实在论</span></td><td>A reality exists <strong>independently of the human mind</strong>, though our access to it may be direct or filtered.</td></tr>
+      <tr><td><strong>I · Interpretivism</strong><span class="meta"> 解释主义</span></td><td>Focuses on understanding the <strong>subjective meanings</strong> people attach to their social world.</td></tr>
+      <tr><td><strong>Pr · Pragmatism</strong><span class="meta"> 实用主义</span></td><td>Lets <strong>the research question</strong> — not a fixed allegiance — decide which position fits best.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">Part 2.2 — Positivism: The Tradition of the Natural Scientist（实证主义）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>Existing theory<span class="cn">既有理论</span></div><div class="sep">→</div>
+    <div>Hypotheses<span class="cn">假设</span></div><div class="sep">→</div>
+    <div>Test with data<span class="cn">用数据检验</span></div><div class="sep">→</div>
+    <div>Confirm or refute<span class="cn">证实或证伪</span></div>
+  </div>
+  <ul>
+    <li><strong>Only observable facts count</strong> — measurable phenomena are the only credible data.<span class="meta"> 只有可观察的事实才算数</span></li>
+    <li><strong>Law-like generalisations</strong> — findings should hold across contexts, as physical science seeks universal laws.<span class="meta"> 追求像物理定律一样可跨情境成立的结论</span></li>
+  </ul>
+  <div class="note"><strong>A tendency, not a strict rule</strong>：positivism usually favours structured methods, large samples and quantitative analysis — but <strong>positivist logic can also be applied to data gathered qualitatively</strong>.<br>
+    <span class="meta">实证主义"通常"偏好结构化、大样本、定量，但不是硬性规定。</span></div>
+</div>
+
+<h3 contenteditable="false">Part 2.3 — Realism: Does Reality Exist Independently of Our Minds?（实在论）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Shares positivism's assumption that a scientific approach can build knowledge, but focuses squarely on <strong>what is "really" out there</strong>.</li>
+  </ul>
+  <table>
+    <thead><tr><th>Direct realism 直接实在论</th><th>Critical realism 批判实在论</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>What our senses show us is an accurate portrayal of the world — <strong>"what you see is what you get."</strong></td>
+        <td>Our senses give us sensations and images of reality, not reality directly — and those impressions <strong>can mislead us</strong>, so <strong>multiple levels of analysis</strong>（individual, group, organisation）are needed.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note">批判实在论认为社会世界在不断变化——这与"<strong>解释一个现象以便提出变革建议</strong>"的商科研究很契合。</div>
+</div>
+
+<h3 contenteditable="false">Part 2.4 — Interpretivism: Humans as Social Actors（解释主义）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>Complexity over laws</strong> — business and management are too complex to reduce to law-like generalisations without losing what matters.<span class="meta"> 商业太复杂，硬套规律会丢掉关键</span></li>
+    <li><strong>People as social actors</strong> — we each interpret our own role and others', much like actors interpreting a part.<span class="meta"> 人像演员一样诠释自己和他人的角色</span></li>
+    <li><strong>Two intellectual roots</strong> — <em>Phenomenology</em>（how people make sense of the world）and <em>Symbolic interactionism</em>（how we adjust to others）.<span class="meta"> 两个思想源头：现象学、符号互动论</span></li>
+    <li><strong>An empathetic stance</strong> — enter the social world of your participants and understand it from their point of view.<span class="meta"> 共情立场：进入研究对象的世界，从他们的视角理解</span></li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">Part 2.5 — Pragmatism: Let the Research Question Decide（实用主义）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="answer">Debating which philosophy is objectively "correct" is often beside the point in practice.<br>
+    <span class="meta" style="font-weight:normal;">争论哪种哲学"客观正确"，在实践中往往没意义。</span></div>
+  <p><strong>Philosophy as a continuum, not an either/or choice</strong> — a study can shift position as the question requires:</p>
+  <div class="chain">
+    <div>More objective<span class="cn">Measurement, hypothesis testing</span></div>
+    <div class="sep">↔</div>
+    <div>More interpretive<span class="cn">Meaning, context, social actors</span></div>
+  </div>
+  <ul>
+    <li><strong>Useful beats "correct"</strong> — a position that answers your question better is a legitimate basis for choosing it.</li>
+    <li><strong>Mixed methods by design</strong> — quantitative and qualitative data can combine within a single study.</li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">Part 2.6 — Comparing the Four Philosophies（四种哲学对照表）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th></th><th>Positivism</th><th>Realism</th><th>Interpretivism</th><th>Pragmatism</th></tr></thead>
+    <tbody>
+      <tr><th>Ontology<br><span class="meta">本体论</span></th>
+        <td>Reality is external, objective, and the same for everyone</td>
+        <td>Reality exists independently of the mind, but our access to it may be direct or filtered</td>
+        <td>Reality is socially constructed and can differ between people</td>
+        <td>Whichever view of reality best helps answer the RQ</td></tr>
+      <tr><th>Epistemology<br><span class="meta">认识论</span></th>
+        <td>Only observable phenomena count; seeks causal, law-like patterns</td>
+        <td>Observable phenomena are credible, but our sensations may need correcting for context</td>
+        <td>Knowledge is found in subjective meanings and the details of specific situations</td>
+        <td>Both observable facts and subjective meanings can count, depending on the question</td></tr>
+      <tr><th>Axiology<br><span class="meta">价值论</span></th>
+        <td><strong>Value-free</strong>; researcher stays objective and detached</td>
+        <td>Shaped by the researcher's worldview, though a scientific stance is still sought</td>
+        <td><strong>Value-bound</strong>; researcher is part of what is studied</td>
+        <td>Values shape interpretation; researcher moves between stances</td></tr>
+      <tr><th>Typical methods<br><span class="meta">典型方法</span></th>
+        <td>Structured, often large-sample, quantitative</td>
+        <td>Method chosen to fit the subject matter — quant or qual</td>
+        <td>Small-sample, in-depth, qualitative</td>
+        <td>Mixed methods</td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Adapted and paraphrased from Saunders, Lewis &amp; Thornhill's comparison of research philosophies in management research.</p>
+</div>
+
+<h3 contenteditable="false">Part 2.7 — The Objectivist–Subjectivist Spectrum &amp; Typical Emphasis（光谱位置与定量／定性侧重）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>Positivism<span class="cn">Most objectivist — law-like generalisations</span></div><div class="sep">→</div>
+    <div>Realism<span class="cn">Objective reality, filtered by perception</span></div><div class="sep">→</div>
+    <div>Pragmatism<span class="cn">Whichever fits the RQ</span></div><div class="sep">→</div>
+    <div>Interpretivism<span class="cn">Most subjectivist — socially constructed meaning</span></div>
+  </div>
+  <p class="meta" style="display:flex;justify-content:space-between;"><span>← OBJECTIVIST / SCIENTIFIC</span><span>SUBJECTIVIST / INTERPRETIVE →</span></p>
+
+  <h4>Typical Quantitative vs. Qualitative Emphasis（示意）</h4>
+  <div class="bars">
+    <div class="row"><span class="lbl">Positivism</span><div class="track"><div class="q" style="width:85%">定量 85</div><div class="ql" style="width:15%">15</div></div></div>
+    <div class="row"><span class="lbl">Realism</span><div class="track"><div class="q" style="width:55%">定量 55</div><div class="ql" style="width:45%">定性 45</div></div></div>
+    <div class="row"><span class="lbl">Pragmatism</span><div class="track"><div class="q" style="width:50%">定量 50</div><div class="ql" style="width:50%">定性 50</div></div></div>
+    <div class="row"><span class="lbl">Interpretivism</span><div class="track"><div class="q" style="width:15%">15</div><div class="ql" style="width:85%">定性 85</div></div></div>
+  </div>
+  <div class="note">A <strong>teaching simplification</strong> of typical tendencies, not a measured statistic — the actual balance always depends on the specific RQ. Positions sit on a continuum rather than in fixed boxes.<br>
+    <span class="meta">这是教学用的示意，不是统计数据。</span></div>
+</div>
+
+<h3 contenteditable="false">Part 3 — The Four Research Paradigms（Burrell &amp; Morgan 四范式）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="quad">
+    <div></div><div class="ax">SUBJECTIVIST</div><div class="ax">OBJECTIVIST</div>
+    <div class="ax">RADICAL<br>CHANGE</div><div class="cell">Radical Humanist<br><span class="meta">激进人本主义</span></div><div class="cell">Radical Structuralist<br><span class="meta">激进结构主义</span></div>
+    <div class="ax">REGULATION</div><div class="cell">Interpretive<br><span class="meta">解释主义</span></div><div class="cell hl">Functionalist ★<br><span class="meta">功能主义</span></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Paradigm</th><th>Ontology / Stance</th><th>Concerned With</th></tr></thead>
+    <tbody>
+      <tr class="total"><td><strong>Functionalist</strong></td><td>Objectivist + Regulation</td><td>Rational explanation of organisational problems; practical, problem-oriented solutions <strong>within the existing order</strong> — the paradigm most business research sits in</td></tr>
+      <tr><td><strong>Interpretive</strong></td><td>Subjectivist + Regulation</td><td>Understanding the meanings organisational members attach to their world, without necessarily seeking to change it</td></tr>
+      <tr><td><strong>Radical Humanist</strong></td><td>Subjectivist + Radical Change</td><td>Challenging existing social patterns so people can move beyond constraints on their potential</td></tr>
+      <tr><td><strong>Radical Structuralist</strong></td><td>Objectivist + Radical Change</td><td>Fundamental change based on analysing structures such as power relationships and patterns of conflict</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">Most business and management research operates in the <strong>functionalist</strong> paradigm — objectivist, problem-oriented, working within the current organisational order.<br>
+    <span class="meta" style="font-weight:normal;">绝大多数商科研究落在功能主义象限。</span></div>
+</div>
+
+<h3 contenteditable="false">Part 4.1 — Three Directions of Reasoning（三种推理方向）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>DEDUCTIVE 演绎</th><th>INDUCTIVE 归纳</th><th>ABDUCTIVE 溯因</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Existing Theory → Hypothesis → Test Against Data → Confirm / Refute</td>
+        <td>Observe Data → Identify Patterns → Build New Theory → Tentative Generalisation</td>
+        <td>Surprising Fact → Plausible Explanation → Check vs. Data → Refine Explanation ↻ <em>iterates</em></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="answer">Deduction: <strong>general → specific</strong>. Induction: <strong>specific → general</strong>. Abduction: <strong>cycles</strong> between a puzzling observation and the best available explanation.</div>
+</div>
+
+<h3 contenteditable="false">Part 4.2 — Deduction vs. Induction（演绎 vs 归纳）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Deductive（theory → data）</th><th>Inductive（data → theory）</th></tr></thead>
+    <tbody>
+      <tr><td>Starts from existing theory; develops hypothesis(es) to test</td><td>Starts by collecting data on a phenomenon of interest</td></tr>
+      <tr><td>Designs a research strategy specifically to test that hypothesis</td><td>Builds or refines a theory as a result of analysing that data</td></tr>
+      <tr><td>General（theory）→ specific（observations）</td><td>Specific（observations）→ general（theory）</td></tr>
+      <tr><td><strong>Best when a well-developed theory already exists</strong></td><td><strong>Best when existing theory is thin, contested, or doesn't fit your context</strong></td></tr>
+      <tr><td>Typically structured, quantitative — though not exclusively</td><td>Typically smaller samples, qualitative, in-depth</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">Part 4.3 — Abduction: Moving Between Data and Theory（溯因：在数据与理论之间往返）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>STEP 1<span class="cn">Surprising observation — a fact existing theory doesn't fully explain</span></div><div class="sep">→</div>
+    <div>STEP 2<span class="cn">Most plausible explanation — work backwards from the puzzle</span></div><div class="sep">→</div>
+    <div>STEP 3<span class="cn">Test against data — check, then revise</span></div><div class="sep">↻</div>
+  </div>
+  <ul>
+    <li><strong>Why it matters</strong>：the most realistic account of how research actually unfolds, and a good fit with <strong>mixed methods</strong>.</li>
+    <li><strong>When to use it</strong>：when something unexpected in your context is not adequately accounted for by existing theory.</li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">Part 4.4 — Matching an Approach to Your Type of Study（路径与研究类型的匹配）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Approach</th><th>Starting Point</th><th>Best Suited When…</th><th>Example Study</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Deductive</strong></td><td>Existing theory</td><td>A well-established theory exists and you want to test whether it holds in a new context</td><td>Testing whether TAM predicts mobile banking adoption among Kenyan SMEs</td></tr>
+      <tr><td><strong>Inductive</strong></td><td>Observed data</td><td>Little theory exists, or existing theory doesn't fit your context well</td><td>Exploring how informal traders in an unregulated market experience financial risk, to build a grounded explanation</td></tr>
+      <tr><td><strong>Abductive</strong></td><td>A surprising fact or anomaly</td><td>Something you observe in practice doesn't match what existing theory predicts</td><td>Investigating why a well-designed strategy is being undermined at implementation level in ways theory doesn't explain</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">Part 5.1 — How to Justify a Research Philosophy for Your Topic（怎么为自己的选题论证研究哲学）</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li><strong>Start from your research question</strong>, not the other way round — ask what kind of knowledge you actually need.<span class="meta"> 从研究问题出发</span></li>
+    <li><strong>State your ontological position</strong>：objective fact, or socially constructed by the people involved?<span class="meta"> 写明本体论立场</span></li>
+    <li><strong>State your epistemological position</strong>：what counts as credible evidence — numbers, narratives, or both?<span class="meta"> 写明认识论立场</span></li>
+    <li><strong>Be honest about your axiological position</strong>：where do your own values and experience sit, and could that introduce bias you need to manage?<span class="meta"> 坦诚价值论立场</span></li>
+    <li>A good justification <strong>names the philosophy, explains why it fits, and acknowledges what a different philosophy would have offered instead</strong>.<span class="meta"> 好的论证：点名、说理由、并承认另一种哲学能提供什么</span></li>
+  </ol>
+  <div class="note">对照 8.5 评审的 Muddie (2024)：第 3.2 节只写了"采用 positivism，因为用了定量方法"——<strong>理由倒置了</strong>（应由哲学决定方法，而不是方法反推哲学），也没有交代本体论、认识论、价值论，更没说其他哲学能提供什么。这是一个可以写进 consolidated review 的观察点。</div>
+</div>
+
+<h3 contenteditable="false">Part 5.2 — The Philosophy Diagnostic Exercise（哲学诊断练习）</h3>
+
+<div class="box" contenteditable="false">
+  <p>Applied to your own emerging topic — answer each honestly, there are no wrong answers.<span class="meta"> 用在自己的选题上，诚实回答，没有标准答案。</span></p>
+  <table class="checklist">
+    <thead><tr><th>#</th><th>问题</th><th>倾向</th><th>我的回答</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Nature of reality</strong>：Does the core phenomenon in my topic exist as an objective fact, or is it produced by the people experiencing it?<br><span class="meta">核心现象是客观事实，还是由亲历者建构？</span></td><td></td><td></td></tr>
+      <tr><td>2</td><td><strong>Acceptable knowledge</strong>：Would I trust a numeric measure on its own, or do I need people's own accounts to really understand it?<br><span class="meta">只信数字，还是必须听当事人讲？</span></td><td></td><td></td></tr>
+      <tr><td>3</td><td><strong>Role of values</strong>：How much of my own experience or opinion am I bringing in — and is that a strength or a risk?<br><span class="meta">我带入了多少自身经验和观点？是优势还是风险？</span></td><td></td><td></td></tr>
+      <tr><td>4</td><td><strong>Relationship to the research</strong>：Am I standing outside looking in, or am I in some way part of it?<br><span class="meta">我是站在外面看，还是本身就身在其中？</span></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="meta">In pairs: discuss your answers, then together name the philosophy（or blend）that best fits — and be ready to defend it.　进入编辑模式可直接填写后两列。</p>
+</div>
+
+<h3 contenteditable="false">Before Next Session — This Week's Practical Deliverables（本周作业）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>#</th><th>要交的东西</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Complete the <strong>philosophy diagnostic exercise</strong> for your own emerging topic（上面 Part 5.2 的表）</td></tr>
+      <tr class="total"><td>2</td><td>Write a short paragraph（<strong>150–200 words</strong>）stating and justifying your research philosophy（按 Part 5.1 的五步写）</td></tr>
+      <tr><td>3</td><td>Identify whether your study is best approached <strong>deductively, inductively, or abductively</strong> — and why（参考 Part 4.4）</td></tr>
+      <tr><td>4</td><td>Bring both to next week's session on <strong>Research Design</strong>（即第五节课）</td></tr>
+    </tbody>
+  </table>
+</div>
+
 <h2 contenteditable="false">第五节课</h2>
 
 <p class="meta" contenteditable="false">Week 5 · Formulating the Research Design（研究设计）· <a href="Session5%20Formulating%20the%20Research%20Design.pdf">课件 PDF（16 页）</a><br>
-  课件里提到 "your own philosophical underpinnings（Week 4）"——第四周讲研究哲学，笔记里还没有这一节。</p>
+  课件里提到的 "your own philosophical underpinnings（Week 4）" 见上一节「第四节课」。</p>
 
 <h3 contenteditable="false">1. Learning Objectives（本节学习目标）</h3>
 
@@ -2983,7 +3331,7 @@
 
 <script>
 let editMode = false;
-const NOTES_VERSION = '2026-09-21-session5-v1';
+const NOTES_VERSION = '2026-09-21-session4-v1';
 
 function toggleEdit() {
   editMode = !editMode;
