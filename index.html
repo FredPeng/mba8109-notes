@@ -2966,6 +2966,826 @@
   </div>
 </div>
 
+<h2 contenteditable="false">第七节课</h2>
+
+<p class="meta" contenteditable="false">Week 7 · Population and Sampling（总体与抽样）· <a href="Session7%20Population%20and%20Sampling.pdf">课件 PDF（15 页）</a><br>
+  对应 SU Guide §7.2(b) 第三章的 <strong>3.2 Population &amp; Sampling</strong> 一节。</p>
+
+<h3 contenteditable="false">1. Learning Outcomes（本节目标）</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li>Define population, target and accessible population, unit of analysis, frame and sample<span class="meta"> 区分六个概念</span></li>
+    <li><strong>Match the population logic to the kind of data your study needs</strong><span class="meta"> 按数据类型决定总体怎么处理</span></li>
+    <li><strong>Source and cite a scientific, verifiable population figure</strong><span class="meta"> 总体数字要有可核查的出处</span></li>
+    <li>Show the chain from Chapter 1 scope to the Chapter 3 frame<span class="meta"> 从 1.5 范围贯通到 3.2 抽样框</span></li>
+    <li>Choose between probability and non-probability techniques</li>
+    <li>Allocate a sample proportionately or disproportionately across strata, clusters and quotas</li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">2. The Vocabulary of Section 3.2（3.2 节的六个概念）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>术语</th><th>含义</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Population</strong><span class="meta"><br>总体</span></td><td>The full set of cases（people, firms, facilities, records, transactions）from which a sample is drawn and about which conclusions are made.</td></tr>
+      <tr><td><strong>Target population</strong><span class="meta"><br>目标总体</span></td><td>The population the research question is <strong>ultimately about</strong>，例：all nurses in Kenyan level 4–6 public hospitals.</td></tr>
+      <tr><td><strong>Accessible population</strong><span class="meta"><br>可及总体</span></td><td>The part you can <strong>actually reach</strong>，例：nurses in Nairobi County level 4–6 hospitals.</td></tr>
+      <tr><td><strong>Unit of analysis</strong><span class="meta"><br>分析单位</span></td><td>The level at which data are analysed: individual, team, firm, facility, county, year. <strong>It must match the objectives.</strong></td></tr>
+      <tr><td><strong>Sampling frame</strong><span class="meta"><br>抽样框</span></td><td>The <strong>complete, named list</strong> of all cases in the accessible population from which the sample is actually selected.</td></tr>
+      <tr><td><strong>Sample / census</strong><span class="meta"><br>样本／普查</span></td><td>样本是选出的子集；<strong>总体小于约 50 时建议做普查</strong>。</td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Source: Saunders, Lewis &amp; Thornhill（9th ed.）§7.1–7.2, pp. 289–293.</p>
+</div>
+
+<h3 contenteditable="false">3. Data Logic — 数据类型决定总体怎么处理 ★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>研究／数据类型</th><th>总体怎么界定</th><th>典型选取方式</th><th>可声称的推广</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Quantitative primary</strong><br><span class="meta">问卷、实验</span></td><td>Countable, listed cases with a known total N</td><td>Probability sampling；<strong>sample size by formula or table</strong></td><td>Statistical — to the population in the frame</td></tr>
+      <tr class="total"><td><strong>Qualitative primary</strong><br><span class="meta">访谈、焦点小组、案例</span></td><td><strong>Information-rich cases</strong> or participants with the relevant experience</td><td><strong>Purposive, snowball；size by saturation</strong></td><td><strong>Analytical / theoretical — to concepts, not to N</strong></td></tr>
+      <tr><td><strong>Secondary / archival</strong><br><span class="meta">财报、登记册</span></td><td>Records, firms or firm-years over a defined period</td><td>Census of the listed set, or a filtered subset with <strong>stated criteria</strong></td><td>To the defined set of records and period</td></tr>
+      <tr><td><strong>Mixed methods</strong></td><td>Two populations or two layers（如员工与管理者）</td><td>定量用概率抽样，定性用立意抽样</td><td>各自按各自的逻辑，并<strong>说明两者如何整合</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    Rule: state the data type first, then the population logic — <strong>never borrow a survey sample-size formula for an interview study.</strong><br>
+    <span class="meta" style="font-weight:normal;">先说数据类型，再谈总体逻辑；<strong>绝不要把问卷的样本量公式套到访谈研究上</strong>。</span>
+  </div>
+  <div class="note">这正是 8.5 评审里 Muddie (2024) 最大的方法学硬伤：用 Yamane 公式（概率抽样逻辑）算出 n = 398，实际却做便利抽样。课件在这里把这条写成了明规则。</div>
+</div>
+
+<h3 contenteditable="false">4. Scientific, Verifiable Population（总体数字必须有可核查的出处）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>如果你的总体是…</th><th>可引用的核查来源（注明年份）</th></tr></thead>
+    <tbody>
+      <tr><td>Listed companies</td><td>Nairobi Securities Exchange listing；Capital Markets Authority reports</td></tr>
+      <tr><td>Commercial banks, MFBs, SACCOs</td><td>Central Bank of Kenya supervision report；SASRA register</td></tr>
+      <tr><td>Health facilities</td><td>Kenya Master Health Facility List（Ministry of Health）</td></tr>
+      <tr><td>Households, population, SMEs</td><td>KNBS Census and Economic Survey；MSME survey</td></tr>
+      <tr><td>Employees of one organisation</td><td>HR establishment or payroll record，<strong>附 gatekeeper letter</strong></td></tr>
+      <tr><td>Professionals</td><td>Registers of ICPAK, LSK, KMPDC, NCK, EBK</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>什么叫"科学的"</th><th>评阅人一眼能看出的红旗</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Official or institutional、dated、publicly or formally obtainable、consistent with the scope。<strong>名单放进 proposal 的 Appendix 3</strong>（SU Guide 规定的位置）。</td>
+        <td><ul>
+          <li>"About 500 employees" with <strong>no source</strong></li>
+          <li>A figure from a <strong>news story or website</strong></li>
+          <li>A list <strong>older than the study period</strong></li>
+          <li>Numbers that <strong>do not add up across strata</strong></li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">5. Alignment — 第一章范围决定 3.2 的边界</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Chapter 1 · Scope（1.5）</th><th>Chapter 3 · Population and sampling</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Content scope</strong>：研究的变量与构念</td><td>谁掌握这些信息 → 受访者与<strong>分析单位</strong></td></tr>
+      <tr><td><strong>Geographic scope</strong>：郡、行业、地区、国家</td><td>哪些个案进入<strong>抽样框</strong></td></tr>
+      <tr><td><strong>Time scope</strong>：研究期间，如 2019–2025</td><td>firm-years，还是某一时点的横断面</td></tr>
+      <tr><td><strong>Methodological scope</strong>：设计与数据类型</td><td>概率还是非概率</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    Consistency test: <strong>title → objectives → scope → population → frame → sample must describe the same cases.</strong> You may generalise <strong>only to the frame you sampled from</strong>.<br>
+    <span class="meta" style="font-weight:normal;">标题、目标、范围、总体、抽样框、样本必须说的是同一批个案；你只能推广到你实际抽样的那个框。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">6. The Sampling Frame — 五条质量标准与四类常见错误</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>好抽样框的五条</th><th>四类常见错误</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ol>
+          <li><strong>Relevant</strong> — 框里的个案答得了你的研究问题</li>
+          <li><strong>Up to date</strong> — 编制时间与研究期匹配</li>
+          <li><strong>Complete</strong> — 每个合格个案都在列</li>
+          <li><strong>Accurate</strong> — 名称、规模、类别正确</li>
+          <li><strong>Precise</strong> — 不相关的个案已排除</li>
+        </ol></td>
+        <td><ul>
+          <li><strong>Under-coverage</strong>：合格个案缺失，如非正规商户</li>
+          <li><strong>Over-coverage</strong>：已停业或不合格的还在名单上</li>
+          <li><strong>Duplication</strong>：分支机构被当成独立企业列出</li>
+          <li><strong>Clustering</strong>：一条记录实际覆盖很多个案</li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>3.2 里要有一张「总体分布表」</h4>
+  <table>
+    <thead><tr><th>Category</th><th>Population (N)</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Stratum / cluster A</td><td>…</td><td>Register, year</td></tr>
+      <tr><td>Stratum / cluster B</td><td>…</td><td>Register, year</td></tr>
+      <tr class="total"><td><strong>Total</strong></td><td><strong>N</strong></td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Source: Saunders et al.（9th ed.）§7.4 pp. 295–297.</p>
+</div>
+
+<h3 contenteditable="false">7. Probability vs Non-Probability（两大类抽样的分野）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th></th><th>Probability（representative）</th><th>Non-probability（judgemental）</th></tr></thead>
+    <tbody>
+      <tr><th>选取依据</th><td>Random；每个个案有<strong>已知的</strong>（通常等同的）入选概率</td><td>研究者判断或可及性；<strong>概率未知</strong></td></tr>
+      <tr><th>抽样框</th><td><strong>必需</strong></td><td>不一定需要</td></tr>
+      <tr><th>推广方式</th><td>Statistical inference to the population</td><td>Analytical，推广到<strong>理论或个案</strong></td></tr>
+      <tr><th>样本量</th><td>由置信水平与误差<strong>算出来</strong></td><td>由目的、饱和、可行性<strong>定出来</strong></td></tr>
+      <tr><th>典型设计</th><td>Surveys, experiments, correlational studies</td><td>Case studies, interviews, exploratory and pilot work</td></tr>
+      <tr><th>具体技术</th><td>Simple random, systematic, stratified, cluster, multi-stage</td><td>Quota, purposive, snowball, self-selection, convenience</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">8. Five Probability Techniques（五种概率抽样）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>技术</th><th>做法</th><th>适用／注意</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Simple random</strong><span class="meta"> 简单随机</span></td><td>个案编号，用随机数选取</td><td>小规模、有名单、不分散的总体</td></tr>
+      <tr><td><strong>Systematic</strong><span class="meta"> 系统抽样</span></td><td>随机起点后每隔 k 个取一个（<strong>k = N / n</strong>）</td><td><strong>当心名单里的周期性排列</strong></td></tr>
+      <tr><td><strong>Stratified random</strong><span class="meta"> 分层随机</span></td><td>按行业、职级、规模分层，层内随机抽</td><td>需要<strong>保证子群有代表</strong>时</td></tr>
+      <tr><td><strong>Cluster</strong><span class="meta"> 整群</span></td><td>随机抽整个自然群（网点、郡、学校），群内全查</td><td>权衡：更便宜，但<strong>精度更低</strong></td></tr>
+      <tr><td><strong>Multi-stage</strong><span class="meta"> 多阶段</span></td><td>群 → 子群 → 个案，每阶段随机（郡 → 机构 → 员工）</td><td><strong>只在最后一阶段才需要抽样框</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note">多数 MBA 研究是<strong>混合设计</strong>，例如先按部门分层、层内再做系统抽样——<strong>3.2 里每个阶段都要写清楚</strong>。</div>
+</div>
+
+<h3 contenteditable="false">9. Allocation — 等比例 vs 不等比例分配</h3>
+
+<div class="box" contenteditable="false">
+  <h4>示例：1,200 名员工分三层，n = 300</h4>
+  <table>
+    <thead><tr><th>Stratum</th><th>N</th><th>Share</th><th>Proportionate</th><th>Disproportionate（equal）</th><th>Weight N/n</th></tr></thead>
+    <tbody>
+      <tr><td>Clinical</td><td>720</td><td>60%</td><td><strong>180</strong></td><td>100</td><td>7.2</td></tr>
+      <tr><td>Administrative</td><td>360</td><td>30%</td><td><strong>90</strong></td><td>100</td><td>3.6</td></tr>
+      <tr><td>Management</td><td>120</td><td>10%</td><td><strong>30</strong></td><td>100</td><td>1.2</td></tr>
+      <tr class="total"><td>Total</td><td>1,200</td><td>100%</td><td>300</td><td>300</td><td>—</td></tr>
+    </tbody>
+  </table>
+  <div class="formula">Proportionate：n(h) = n × N(h) / N</div>
+  <ul>
+    <li>等比例：每层按其在总体中的占比配额，<strong>结果可直接合并</strong></li>
+    <li>不等比例：<strong>过采样小而重要的层</strong>，保证每层都有足够个案可分析</li>
+    <li class="term">不等比例的结果在做全总体估计前<strong>必须按 N/n 加权回去</strong></li>
+  </ul>
+  <div class="note">整群与多阶段同理：等比例用 <strong>PPS（probability proportional to size）</strong>，大网点入选概率更高；不等比例则各群机会均等，<strong>分析时按群规模加权</strong>。</div>
+</div>
+
+<h3 contenteditable="false">10. Non-Probability Techniques（六种非概率抽样）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>技术</th><th>怎么选个案</th><th>何时用</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Quota — proportional</strong><span class="meta"><br>等比例配额</span></td><td>配额按总体占比（60% 临床、30% 行政、10% 管理）</td><td>没有抽样框，但<strong>知道总体比例</strong></td></tr>
+      <tr><td><strong>Quota — non-proportional</strong><span class="meta"><br>不等比例配额</span></td><td>每组固定下限，不论规模</td><td><strong>子群对比</strong>比镜像总体更重要时</td></tr>
+      <tr class="total"><td><strong>Purposive</strong><span class="meta"><br>立意抽样</span></td><td>典型、极端、关键、同质或<strong>最大差异</strong>个案</td><td>要<strong>信息丰富</strong>的个案做深度</td></tr>
+      <tr><td><strong>Snowball</strong><span class="meta"><br>雪球</span></td><td>先期受访者介绍其他人</td><td>难接触或隐蔽总体</td></tr>
+      <tr><td><strong>Self-selection</strong><span class="meta"><br>自选</span></td><td>个案响应招募而自愿参加</td><td>话题能吸引有动机的参与者</td></tr>
+      <tr><td><strong>Convenience</strong><span class="meta"><br>便利</span></td><td>谁好找找谁</td><td><strong>只适合预调查；理由最弱</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>比例不等于随机：</strong>proportional quota 是 proportionate stratified 的非概率孪生；non-proportional quota 对应 disproportionate allocation。<br>
+    <strong>立意抽样里的平衡靠选择标准实现</strong>（例如每个部门两名管理者）——<strong>务必写明纳入与排除标准</strong>。
+  </div>
+</div>
+
+<h3 contenteditable="false">11. Sample Size — 按技术的逻辑来论证数字 ★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Probability samples</th><th>Non-probability samples</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="formula">Yamane (1967)：n = N / (1 + N e²)<br>N = 1,200, e = 0.05 → n ≈ 300</div>
+          <ul>
+            <li>也可用 <strong>Krejcie &amp; Morgan (1970)</strong> 表、<strong>Cochran (1977)</strong> 公式（大总体）</li>
+            <li><strong>按预期回收率调整：n(adj) = n × 100 / re%</strong><br><span class="meta">n = 300、预期回收 75% → 发放 400 份</span></li>
+            <li>写明置信水平（通常 95%）与误差；<strong>总体小于约 50 → 普查</strong></li>
+          </ul>
+        </td>
+        <td>
+          <p><strong>没有公式——由目的的逻辑决定</strong></p>
+          <ul>
+            <li><strong>Saturation（饱和）</strong>：新访谈几乎不再带来新洞见时停止</li>
+            <li><strong>同质群体：约 12 个深度访谈</strong>（Guest et al., 2006）</li>
+            <li><strong>异质或问题宽泛：约 25–30 个访谈</strong></li>
+            <li>配额：每个配额格要够做计划中的分析</li>
+          </ul>
+          <p class="term">用目的、深度、资源、可及性来论证——<strong>不要用问卷公式</strong>。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">12. Writing Section 3.2（3.2 节怎么写）+ 本节练习</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>小节</th><th>要写什么</th></tr></thead>
+    <tbody>
+      <tr><td><strong>3.2.1 Target population</strong></td><td>定义它，给出 N，<strong>引用可核查来源</strong>；附总体分布表</td></tr>
+      <tr><td><strong>3.2.2 Sampling frame</strong></td><td>点名这份名单、它的<strong>日期</strong>、以及纳入／排除标准</td></tr>
+      <tr><td><strong>3.2.3 Sample size</strong></td><td>公式或逻辑、参数、<strong>把计算过程写出来</strong></td></tr>
+      <tr><td><strong>3.2.4 Technique and procedure</strong></td><td>概率与否；等比例还是不等比例；<strong>一步一步写</strong></td></tr>
+      <tr><td>样本分布表</td><td>Stratum / cluster · N · n · 每层内部用的技术</td></tr>
+    </tbody>
+  </table>
+
+  <h4>课堂练习（可直接用于自己的 concept paper）</h4>
+  <table class="checklist">
+    <thead><tr><th>#</th><th>步骤</th><th>我的答案</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>用一句话引出你第一章的 scope</td><td></td></tr>
+      <tr><td>2</td><td>写出目标总体，附<strong>来源与年份</strong></td><td></td></tr>
+      <tr><td>3</td><td>点名你的抽样框，并说出<strong>一个可能的框误差</strong></td><td></td></tr>
+      <tr><td>4</td><td>选概率还是非概率，<strong>说明理由</strong></td><td></td></tr>
+      <tr><td>5</td><td>起草样本分布表（等比例或不等比例）</td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Reading ahead: Saunders et al.（9th ed.）Ch. 7 self-check questions 与 "Progressing your research project", pp. 331–332。</p>
+</div>
+
+<h2 contenteditable="false">第八节课</h2>
+
+<p class="meta" contenteditable="false">Week 8 · Using Secondary Data &amp; Collecting Data Through Observation（二手数据与观察法）· <a href="Session8%20Secondary%20Data%20and%20Observation.pdf">课件 PDF（10 页）</a></p>
+
+<h3 contenteditable="false">1. Objectives &amp; Where They Land（本节目标与对应的 concept paper 位置）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>学完能做到</th><th>落在 concept paper 哪里</th></tr></thead>
+    <tbody>
+      <tr><td>识别商科研究相关的二手数据类型与来源</td><td>第三章 — 数据收集方法与来源</td></tr>
+      <tr><td>评估二手数据的适用性、效度与信度</td><td>第三章 — 数据的效度与信度</td></tr>
+      <tr><td><strong>设计 data extraction sheet</strong>：变量、来源与期间、分析单位、编码规则</td><td><strong>附录 — 数据提取表</strong></td></tr>
+      <tr><td>区分参与式观察与结构化观察</td><td>第三章 — 伦理与访问许可</td></tr>
+      <tr><td>设计结构化观察表</td><td><strong>附录 — 观察表</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">2. Three Types of Secondary Data（二手数据的三类）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>类型</th><th>包含什么</th><th>肯尼亚的例子</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Document</strong><span class="meta"><br>文献类</span></td><td><strong>文本</strong>：年报与整合报告、董事会纪要、政策、邮件、新闻稿、网页<br><strong>非文本</strong>：录音、图像、视频、社交媒体内容</td><td>NSE 上市公司年报；Hansard；郡综合发展规划</td></tr>
+      <tr><td><strong>Survey-based</strong><span class="meta"><br>调查类</span></td><td>人口普查；持续性与定期调查；专项调查</td><td>2019 人口与住房普查；KDHS；KIHBS；FinAccess；Afrobarometer</td></tr>
+      <tr><td><strong>Multiple-source</strong><span class="meta"><br>多来源</span></td><td><strong>Snapshot</strong>：某一时点或区域汇编<br><strong>Longitudinal</strong>：由多来源拼成的时间序列</td><td>KNBS Economic Survey；CBK 统计公报；World Bank WDI</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>Raw vs compiled：</strong>原始数据几乎未经处理，汇编数据已被挑选或汇总——<strong>要清楚自己手上是哪一种，因为它限制了你能做什么分析</strong>。</div>
+</div>
+
+<h3 contenteditable="false">3. Where Business Data Actually Sit（商业数据都在哪里，各有什么坑）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>来源</th><th>具体</th><th>Watch（坑）</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Databases</strong></td><td>Bloomberg、Refinitiv、Orbis；World Bank WDI、IMF；Afrobarometer、DHS microdata</td><td>订阅权限；<strong>不同版本之间定义会变</strong></td></tr>
+      <tr><td><strong>Company records</strong></td><td>年报与整合报告；董事会纪要、HR 与 ERP 记录；CMA 与 NSE 备案</td><td>访问许可；<strong>选择性披露；财务重述</strong></td></tr>
+      <tr><td><strong>Government statistics</strong></td><td>KNBS Economic Survey、Census；CBK 银行监管报告；KHIS / DHIS2</td><td><strong>汇总层级；数据修订；报告缺口</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>Mini-case：</strong>肯尼亚商业银行的信用风险与盈利能力，2015–2025。<br>
+    · 你会组合哪两个来源，为什么？<br>
+    · <strong>什么会打断序列？</strong>想想 2016–2019 的利率上限和 2018 年起的 IFRS 9<br>
+    · 并购：退出或合并的银行怎么处理？
+    <br><span class="meta">这三问对你自己的数据同样成立——口径变化、制度变化、主体变化。</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">4. Is It Fit for Your Study? 三阶段检验 ★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li><strong>Overall suitability（整体适用性）</strong><br>
+      <strong>Measurement validity</strong>：它测的是你的构念吗？<strong>Coverage</strong>：总体、期间、所需变量对得上吗？</li>
+    <li><strong>Precise suitability（精确适用性）</strong><br>
+      信度与效度：来源的声誉、收集方法的<strong>透明度</strong>、<strong>跨时间的一致性</strong></li>
+    <li><strong>Costs and benefits（成本收益）</strong><br>
+      取得和清洗所需的时间与金钱，对比它对回答目标的价值</li>
+  </ol>
+  <table>
+    <thead><tr><th>Strengths</th><th>Limitations</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul><li>更省资源、取得快</li><li><strong>Unobtrusive（不打扰研究对象）</strong></li><li>可做纵向与跨国比较</li><li>永久性，<strong>别人可以复核</strong></li></ul></td>
+        <td><ul><li><strong>当初是为别的目的收集的</strong></li><li>定义或汇总层级可能不合用</li><li>访问可能受限或昂贵</li><li><strong>你无法控制原始质量</strong></li></ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">5. Anatomy of a Data Extraction Sheet（数据提取表的构成）★ 实操</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>要素</th><th>要求</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Variables captured</strong></td><td>每个变量的名称、代码与<strong>操作性定义</strong>——<strong>每一个都要追到一个目标、并追到第二章的操作化表</strong></td></tr>
+      <tr><td><strong>Source and period</strong></td><td>确切的文件或数据库、版次、表号或页码、覆盖年份、<strong>访问日期</strong>——让另一个研究者能找到同一个数字</td></tr>
+      <tr><td><strong>Unit of analysis</strong></td><td>一行代表什么：firm-year、county-month、一次董事会、一份政策文件</td></tr>
+      <tr><td><strong>Coding rules</strong></td><td>单位、小数位、虚拟变量编码、<strong>缺失值代码（如 −99）</strong>、以及<strong>数字冲突或被重述时的处理规则</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    表上还要有：<strong>表头</strong>（研究标题、提取人、日期、版本）；<strong>抽样框</strong>（纳入和排除了哪些企业／文件／记录）；
+    <strong>质量控制</strong>（第二名提取人复核一部分记录）；<strong>审计轨迹</strong>（备注列记录每一次判断）。
+  </div>
+
+  <h4>示范</h4>
+  <table>
+    <thead><tr><th>Code</th><th>Variable</th><th>操作性定义</th><th>来源与位置</th><th>期间</th><th>单位</th><th>编码规则</th></tr></thead>
+    <tbody>
+      <tr><td>ROA</td><td>Profitability</td><td>税后利润 ÷ 总资产（%）</td><td>审计年报：利润表、资产负债表</td><td>2015–2025</td><td>Bank-year</td><td>2 位小数；<strong>有重述用重述值</strong>；缺失 = −99</td></tr>
+      <tr><td>NPL</td><td>Credit risk</td><td>不良贷款总额 ÷ 贷款总额（%）</td><td>CBK 银行监管年报，银行分表</td><td>2015–2025</td><td>Bank-year</td><td><strong>年报与 CBK 冲突时用 CBK</strong>，并在备注标记</td></tr>
+      <tr><td>BSIZE</td><td>Board size</td><td>财年末董事人数</td><td>年报：治理声明</td><td>2015–2025</td><td>Bank-year</td><td>计数；<strong>不含候补董事</strong></td></tr>
+      <tr><td>CAP</td><td>Rate-cap regime</td><td>利率上限是否生效</td><td>Banking (Amendment) Act 2016；2019 废止</td><td>2015–2025</td><td>Year</td><td>1 = FY2017–FY2019；否则 0</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    练习：为自己选题的某一个文献或数据库来源，起草一页提取表——<strong>至少四个变量、每个都连到一个目标</strong>；来源要精确到期间与分析单位；<strong>编码规则要写到陌生人也能照做</strong>；和同伴互换，看对方能否提取出同一个值。
+  </div>
+</div>
+
+<h3 contenteditable="false">6. Participant vs Structured Observation（参与式观察与结构化观察）</h3>
+
+<div class="box" contenteditable="false">
+  <h4>参与式观察的四种研究者角色</h4>
+  <table>
+    <thead><tr><th></th><th>身份隐藏 Concealed</th><th>身份公开 Revealed</th></tr></thead>
+    <tbody>
+      <tr><th>参与其中<br><span class="meta">Takes part</span></th><td><strong>Complete participant</strong></td><td><strong>Participant-as-observer</strong></td></tr>
+      <tr><th>只观察<br><span class="meta">Observes only</span></th><td><strong>Complete observer</strong></td><td><strong>Observer-as-participant</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>伦理：隐藏身份的角色需要充分理由，并须经 SU-ISERC 批准。</strong></div>
+
+  <h4>两种观察法对比</h4>
+  <table>
+    <thead><tr><th></th><th>Participant 参与式</th><th>Structured 结构化</th></tr></thead>
+    <tbody>
+      <tr><th>倾向</th><td>解释主义；归纳</td><td>实证主义；演绎</td></tr>
+      <tr><th>问的问题</th><td>这意味着什么？为什么？</td><td>多久一次？持续多长？</td></tr>
+      <tr><th>数据形式</th><td>田野笔记、反思</td><td>计数、时长、编码</td></tr>
+      <tr><th>工具</th><td><strong>研究者本人</strong></td><td><strong>观察表</strong></td></tr>
+      <tr><th>主要威胁</th><td>观察者偏见；角色伦理</td><td>观察者效应；编码错误</td></tr>
+      <tr><th>例子</th><td>跟班观察病房交接以研究团队文化</td><td>在银行网点计时排队</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">7. Designing a Structured Observation Schedule（结构化观察表怎么设计）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>1 Define<span class="cn">从目标与构念定义行为</span></div><div class="sep">→</div>
+    <div>2 Categorise<span class="cn">编成互斥且穷尽的代码</span></div><div class="sep">→</div>
+    <div>3 Choose mode<span class="cn">事件／间隔／时长抽样</span></div><div class="sep">→</div>
+    <div>4 Pilot &amp; train<span class="cn">在真实场次上预试与培训</span></div><div class="sep">→</div>
+    <div>5 Test agreement<span class="cn">正式收数据前先测观察者一致性</span></div>
+  </div>
+
+  <h4>示例：银行网点客户服务，每 5 分钟一个区间</h4>
+  <table>
+    <thead><tr><th>Interval</th><th>排队人数</th><th>在岗柜员</th><th>到店有无问候 (Y/N)</th><th>服务时长 (min)</th><th>是否投诉 (Y/N)</th></tr></thead>
+    <tbody>
+      <tr><td>09:00–09:05</td><td>7</td><td>3</td><td>Y</td><td>4.5</td><td>N</td></tr>
+      <tr><td>09:05–09:10</td><td>11</td><td>3</td><td>N</td><td>6.0</td><td>Y</td></tr>
+      <tr><td>09:10–09:15</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="meta">表头还要记录：观察者、日期、网点、<strong>日型（如月末）</strong>、以及任何异常事件。</p>
+
+  <div class="note">
+    <strong>信度威胁四项：</strong>Subject error（挑到不典型的一天）· Time error（不典型的时段）· Observer error（代码应用不一致）· <strong>Observer effect（被观察者行为改变）</strong>
+  </div>
+</div>
+
+<h3 contenteditable="false">8. Carrying This Week into Chapter Three（本周内容写进第三章哪里）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>第三章小节</th><th>要写什么</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Data collection</strong></td><td><strong>精确点名每一个二手来源</strong>并说明为什么契合你的目标；若有观察，说明你采取的角色</td></tr>
+      <tr><td><strong>Validity and reliability</strong></td><td>展示二手数据的<strong>三阶段评估</strong>；报告观察者之间的一致性</td></tr>
+      <tr><td><strong>Ethics and access</strong></td><td>公司记录的许可；<strong>Kenya Data Protection Act 2019</strong>；任何隐藏角色的理由</td></tr>
+      <tr><td><strong>Appendices</strong></td><td>你的<strong>数据提取表</strong>，以及（如使用）<strong>结构化观察表</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    下次课前：完成一页提取表 → <strong>拿三条真实记录试一遍</strong> → 把犹豫过的地方改进编码规则 → 阅读 Saunders Ch. 8（pp. 342–389）与 Ch. 9（pp. 390–439）。
+  </div>
+</div>
+
+<h2 contenteditable="false">第九节课</h2>
+
+<p class="meta" contenteditable="false">Collecting Primary Data through Interviews, Focus Groups, Research Diaries and Questionnaires（访谈、焦点小组、研究日志、问卷，含效度与信度）· <a href="Session9%20Interviews%20FGDs%20Questionnaires%20Diaries%20Validity%20and%20Reliability.pdf">课件 PDF（17 页）</a><br>
+  注：课件封面标的是 "Week 8"，但末页写着下次是 Week 10（10 月 19 日起），文件名为 Session9——<strong>封面周次应为笔误</strong>。对应第三章 <strong>3.3 Data Collection Methods</strong> 与 <strong>Appendix 2 研究工具</strong>。</p>
+
+<h3 contenteditable="false">1. Design → Method → Tool（方法跟着设计走）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>3.1 的设计</th><th>典型目的</th><th>数据类型</th><th>主要方法</th><th>附录 2 的工具</th></tr></thead>
+    <tbody>
+      <tr><td>描述性／横断面调查</td><td>描述模式、水平、发生率</td><td>定量</td><td>自填或结构化访谈式调查</td><td>问卷（Likert、封闭题）</td></tr>
+      <tr><td>相关／解释性调查</td><td>检验 IV、DV、调节、中介之间的关系</td><td>定量</td><td>问卷；结构化访谈</td><td><strong>由操作化表生成的问卷</strong></td></tr>
+      <tr class="total"><td><strong>案例研究</strong></td><td>在有边界的情境里理解 how 与 why</td><td>定性（常加文献）</td><td><strong>半结构化／深度访谈、FGD、文件审阅</strong></td><td>访谈提纲；FGD 提纲；文件清单</td></tr>
+      <tr><td>探索性／现象学</td><td>弄清在发生什么；寻找新洞见</td><td>定性</td><td>深度访谈；焦点小组；日志</td><td>主题提纲；日志模板</td></tr>
+      <tr><td><strong>混合方法</strong>（序贯或并行）</td><td>用深度解释或验证调查结果</td><td>两者</td><td>问卷 + 关键信息人访谈或 FGD</td><td><strong>问卷与访谈／FGD 提纲都要有</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    Rule of thumb：标准化访谈喂给定量分析，非标准化访谈喂给定性分析。<strong>如果你的设计和你的工具指向不同的分析，评审组一眼就会看出错配。</strong>
+  </div>
+</div>
+
+<h3 contenteditable="false">2. The Golden Thread（工具必须与目标同步的那条金线）</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>Specific objective<span class="cn">Ch.1 §1.3</span></div><div class="sep">→</div>
+    <div>Variable / construct<span class="cn">概念框架 Ch.2</span></div><div class="sep">→</div>
+    <div>Indicators<span class="cn">操作化表</span></div><div class="sep">→</div>
+    <div>Items / questions<span class="cn">工具，附录 2</span></div><div class="sep">→</div>
+    <div>Analysis<span class="cn">Ch.3 §3.4</span></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Objective</th><th>Construct</th><th>Indicator</th><th>问卷题目</th><th>访谈追问</th></tr></thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">To establish the effect of digital banking adoption on customer satisfaction in Tier 1 banks in Nairobi</td>
+        <td>Digital banking adoption (IV)</td><td>Frequency of mobile app use; range of services used</td>
+        <td>"How often do you use the bank's mobile app?"（Daily … Never）</td>
+        <td>"Walk me through the last time you chose the app over the branch. Why?"</td>
+      </tr>
+      <tr>
+        <td>Customer satisfaction (DV)</td><td>Service reliability; responsiveness; overall satisfaction</td>
+        <td>Likert："The app resolves my issues quickly"（1–5）</td>
+        <td>"What would make you rate the app experience higher?"</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>Out-of-sync 的四个警讯：</strong>有题目但没有任何目标需要它（"知道一下也不错"）· 框架里有构念却<strong>没有对应题目</strong> · 图上画了调节变量<strong>却从不测量</strong> · 问了用 3.4 的技术<strong>分析不了</strong>的问题。<br>
+    <strong>检验：每一道题，你能不能说出它对应的目标、构念和分析？说不出就删掉它，或者去修框架。</strong>
+  </div>
+</div>
+
+<h3 contenteditable="false">3. Forms of Research Interview（访谈的形式）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Structured（标准化）</th><th>Semi-structured（半结构化）</th><th>In-depth（非结构化）</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul>
+          <li>题目、顺序完全相同，答案预先编码</li>
+          <li><strong>其实就是访员代填的问卷</strong></li>
+          <li>喂给定量分析；调查策略</li>
+        </ul></td>
+        <td><ul>
+          <li><strong>每个目标一组主题与关键问题</strong></li>
+          <li>顺序与措辞可变，允许追问</li>
+          <li>用来<strong>解释变量之间的关系</strong></li>
+          <li class="term">MBA 层面最常用的定性工具</li>
+        </ul></td>
+        <td><ul>
+          <li>非正式；对要探索的方面心里有数，但无固定清单</li>
+          <li>受访者围绕话题自由发挥</li>
+          <li>最适合探索性研究</li>
+          <li><strong>对访谈者技巧要求高</strong></li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>按人数与媒介：<strong>One-to-one</strong>（面对面或电话）· <strong>One-to-many</strong>（群体访谈、焦点小组）· <strong>Mediated</strong>（电话、视频、线上）· <strong>Key informant</strong>（立意选出的信息丰富者）。</p>
+</div>
+
+<h3 contenteditable="false">4. Interviews or Questionnaire?（什么时候该访谈，什么时候该问卷）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>判断维度</th><th>选访谈（半结构化或深度）</th><th>留在问卷（课上多数人属于这类，这没问题）</th></tr></thead>
+    <tbody>
+      <tr><th>目的</th><td>探索性，或解释"为什么"</td><td>检验已测量变量之间的关系</td></tr>
+      <tr><th>受访者</th><td>靠个人接触建立访问与信任</td><td>大样本、有代表性、地理分散（见 §3.2）</td></tr>
+      <tr><th>问题</th><td>多、复杂或开放式；顺序灵活</td><td>构念在文献里<strong>已有成熟量表</strong></td></tr>
+      <tr><th>场次与分析</th><td>长时段、层层追问</td><td>描述与推断统计（§3.4）</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    <strong>中间路线：</strong>面向员工或客户的问卷 + <strong>4–8 个管理者关键信息人访谈</strong>，或 <strong>2–3 场 FGD</strong> 来解释数字。<strong>在 §3.1 里声明这是混合方法，两种工具都放进附录 2。</strong>
+  </div>
+</div>
+
+<h3 contenteditable="false">5. Developing an Interview Guide（访谈提纲的结构与示范）★ 实操</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th></th><th>段落</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><strong>A</strong></td><td>Opening</td><td>自我介绍与研究说明；目的；<strong>时长</strong>；<strong>同意与录音许可</strong>；保密</td></tr>
+      <tr><td><strong>B</strong></td><td>Rapport / background</td><td>职务、在职年限、所属单位；<strong>先问容易的事实题</strong></td></tr>
+      <tr><td><strong>C</strong></td><td>Themes by objective</td><td><strong>一个具体目标一组</strong>，每组 2–4 个主问题</td></tr>
+      <tr><td><strong>D</strong></td><td>Probes</td><td>"Can you give an example?" "Why do you think that happened?"</td></tr>
+      <tr><td><strong>E</strong></td><td>Closing</td><td>"Anything we have not covered?"；小结；致谢；<strong>后续步骤</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>Block C 示范（目标 2）</h4>
+  <div class="quote">
+    <strong>To examine how leadership style influences employee engagement in private hospitals in Nairobi</strong><br><br>
+    <strong>C2.1</strong> How would you describe the way decisions are made in your unit?<br>
+    <em>Probe: Who is involved? Give a recent example.</em><br><br>
+    <strong>C2.2</strong> How does your supervisor respond when staff raise ideas or concerns?<br>
+    <em>Probe: How did that affect your willingness to go the extra mile?</em><br><br>
+    <strong>C2.3</strong> What makes you feel committed, or not, to your work here?<br>
+    <em>Probe: What role does your supervisor play in that?</em><br><br>
+    <span class="meta">构念对应：transformational leadership (IV) → engagement: vigour, dedication, absorption (DV)</span>
+  </div>
+</div>
+
+<h3 contenteditable="false">6. Data Quality in Interviews（访谈的五类质量威胁与对策）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>问题</th><th>含义</th><th>怎么管理</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Reliability</strong><span class="meta"><br>可依赖性</span></td><td>换个研究者会不会得到类似的信息？</td><td><strong>保留审计轨迹</strong>：提纲、笔记、录音、转写、编码决定</td></tr>
+      <tr><td><strong>Interviewer bias</strong><span class="meta"><br>访谈者偏见</span></td><td>你的语气、评论或非语言线索影响了回答</td><td>中性措辞；<strong>预试提纲</strong>；不用引导性问题；多练</td></tr>
+      <tr><td><strong>Interviewee / response bias</strong><span class="meta"><br>受访者偏差</span></td><td>有所保留，或给社会期许的答案</td><td>建立可信度与融洽；保证保密；<strong>必要时提前把主题发过去</strong></td></tr>
+      <tr><td><strong>Participation bias</strong><span class="meta"><br>参与偏差</span></td><td>只有特定类型的人愿意受访</td><td>用 §3.2 的立意标准；时间地点灵活；<strong>报告谁拒绝了</strong></td></tr>
+      <tr><td><strong>Validity &amp; generalisability</strong></td><td>数据是否反映了所研究的现实？能否启发其他情境？</td><td>把发现连回第二章理论；<strong>与文件或调查数据三角验证</strong>；member checking</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>记录规范：</strong>请求录音许可并说明原因；<strong>笔记作为备份</strong>；尽快转写；<strong>按 SU-ISERC 批准的方式安全存储</strong>。</div>
+</div>
+
+<h3 contenteditable="false">7. Focus Group Discussions（焦点小组）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>要点</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>什么是 FGD</td><td>聚焦于<strong>一个</strong>议题的群体访谈，<strong>参与者之间的互动本身就是数据</strong>；不强求达成共识</td></tr>
+      <tr><td>人数</td><td><strong>通常 4–8 人</strong>，最多约 12；<strong>复杂或敏感话题人数更少</strong></td></tr>
+      <tr><td>选取</td><td><strong>Purposive</strong> 非概率选取，有共同特征的信息丰富者</td></tr>
+      <tr><td>场次</td><td><strong>多开几组</strong>（参与者构成相似），以便跨组比较模式</td></tr>
+      <tr><td>时长</td><td>每场 <strong>45 分钟–1 小时</strong>；主持人 + 记录员／观察员</td></tr>
+      <tr><td>何时用</td><td>探索共同经验与规范；<strong>生成问卷题目</strong>；在混合设计中解释调查结果</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>要当心：</strong>主导型发言者与沉默者 · <strong>公开附和、私下不同意（虚假共识）</strong> · 由管理者发出的邀请会被当成命令 · <strong>群体场合无法完全保证保密</strong> · 议题广度够但深度不如一对一
+  </div>
+</div>
+
+<h3 contenteditable="false">8. FGD Guide — The Question Route（焦点小组提纲的五段式）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>段落</th><th>时长</th><th>做什么</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Opening</strong></td><td>5 min</td><td>轮流发言，事实性、简单：姓名、职务、从业年限</td></tr>
+      <tr><td><strong>Introductory</strong></td><td>10 min</td><td>引入话题："What comes to mind when you hear 'digital banking'?"</td></tr>
+      <tr><td><strong>Transition</strong></td><td>10 min</td><td>过渡到核心："Think of a recent time you used the app instead of a branch…"</td></tr>
+      <tr class="total"><td><strong>Key questions</strong></td><td><strong>45–60 min</strong></td><td><strong>3–5 个问题，一个目标一簇</strong>；时间主要花在这里；追问并<strong>主动邀请相反意见</strong></td></tr>
+      <tr><td><strong>Ending</strong></td><td>10 min</td><td>小结确认："Have I captured this correctly?" "最重要的一点是什么？"</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>提纲还要记录</th><th>主持人的基本规则</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul><li>小组构成与选取标准</li><li>场地、座位、录音设置</li><li>主持人脚本：目的、规则、知情同意</li><li>记录员模板：发言人代码、非语言线索</li></ul></td>
+        <td><ul><li>没有对错答案</li><li>一次一个人发言</li><li><strong>欢迎不同意见</strong></li><li><strong>房间里说的话留在房间里</strong></li></ul></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="meta">Question-route 结构源自 Krueger &amp; Casey (2000)，见 Saunders et al. Ch. 10 §10.7。</p>
+</div>
+
+<h3 contenteditable="false">9. Research Diaries &amp; Remote Interviews（研究日志与远程访谈）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Research diaries（参与者日志）</th><th>电话／视频／线上访谈</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>1 参与者记录</strong>：经历、事件、感受；每日或每事一记 → <strong>2 日志访谈</strong>：就条目与参与者深谈</p>
+          <ul>
+            <li><strong>形式</strong>：结构化日志（时间、事件、评分）／自由文本／语音备忘／App 条目</li>
+            <li><strong>优点</strong>：在事情发生当下采集，<strong>降低回忆偏差</strong></li>
+            <li><strong>适用</strong>：日常流程、工作负荷、客户旅程、变革过程</li>
+            <li><strong>风险</strong>：随时间流失、投入不均——<strong>安排提醒、把条目设短</strong></li>
+            <li><strong>你自己的日志</strong>：记录决策与反思，<strong>构成信度的审计轨迹</strong></li>
+          </ul>
+        </td>
+        <td>
+          <p><strong>好处</strong></p>
+          <ul><li>能触达跨郡、跨国的分散或高层受访者</li><li>成本与差旅时间更低，排期更容易</li></ul>
+          <p><strong>要当心</strong></p>
+          <ul><li>更难建立融洽、读不到非语言线索</li><li>注意力持续时间更短</li><li><strong>确认参与者的网络条件与流量成本</strong></li></ul>
+          <p><strong>远程之前三件事</strong>：取得在该平台录音的同意并安全存储 · <strong>线上 FGD 人数更少并配联合主持</strong> · <strong>在 §3.3 写明媒介并说明理由</strong></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">10. Reliability &amp; Validity（信度与效度）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <ul>
+    <li><strong>Reliability（信度）= 一致性</strong>：换时间、换样本、换访员，工具会不会给出相同结果？</li>
+    <li><strong>Validity（效度）= 准确性</strong>：每道题测的是不是它声称要测的那个构念？</li>
+  </ul>
+  <div class="answer">
+    靶心比喻：<strong>Reliable, not valid</strong>（每次都一致，但一致地偏离靶心）· <strong>Valid and reliable</strong>（又准又稳，目标状态）· <strong>Neither</strong>（又散又偏）。<br>
+    <strong>工具必须先可靠才可能有效，但光可靠还不够。</strong>
+  </div>
+
+  <h4>四种信度</h4>
+  <table>
+    <thead><tr><th>类型</th><th>怎么评估</th><th>何时用</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Internal consistency</strong></td><td>同一构念内部题目相关；<strong>Cronbach's alpha</strong></td><td><strong>每个多题 Likert 量表的默认做法</strong></td></tr>
+      <tr><td><strong>Test-retest</strong></td><td>同工具同人两个时点，比较得分</td><td>稳定特质；只作补充（很难拿到重复作答）</td></tr>
+      <tr><td><strong>Alternative form</strong></td><td>工具内设等价"检查题"互相比较</td><td>长问卷；<strong>慎用</strong>（疲劳、照抄）</td></tr>
+      <tr><td><strong>Inter-rater</strong></td><td>编码者或观察者之间的一致性（<strong>Cohen's kappa</strong>）</td><td>观察表；定性编码</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">11. Types of Validity（效度的七种类型与建立方法）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>类型</th><th>回答什么问题</th><th>怎么建立</th><th>何时／何处</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Face validity</strong><span class="meta"><br>表面效度</span></td><td>工具在受访者看来合理吗？</td><td>预试者反馈；同行检查版式与措辞</td><td>预试阶段</td></tr>
+      <tr><td><strong>Content validity</strong><span class="meta"><br>内容效度</span></td><td>题目是否充分覆盖每个构念与调查问题？</td><td>从文献与<strong>操作化表</strong>生成题目；<strong>专家组逐题评定</strong>（essential / useful / not necessary，即 content validity index）</td><td><strong>预试之前</strong>：导师 + 2–3 位领域专家</td></tr>
+      <tr><td><strong>Construct validity</strong><span class="meta"><br>构念效度</span></td><td>题目测的是不是意图中的构念？</td><td>用<strong>已验证量表</strong>；因子分析（题目在本构念上载荷 ≥ 0.5）</td><td>预试或正式数据</td></tr>
+      <tr><td>▸ <strong>Convergent</strong></td><td>同一构念的题目彼此高度相关吗？</td><td>高载荷；<strong>AVE ≥ 0.5</strong></td><td>正式数据，SEM / CFA</td></tr>
+      <tr><td>▸ <strong>Discriminant</strong></td><td>各构念彼此可区分吗？</td><td>构念间相关低；<strong>Fornell–Larcker 或 HTMT &lt; 0.85</strong></td><td>正式数据，SEM / CFA</td></tr>
+      <tr><td><strong>Criterion-related</strong></td><td>测量能否预测或吻合外部准则？</td><td>与某个结果指标（实际销量、员工流失）相关</td><td>同期：concurrent；日后：predictive</td></tr>
+      <tr><td><strong>Internal validity</strong></td><td>发现的关系能否归因于 IV 而非别的东西？</td><td>框架里的<strong>控制变量</strong>；稳健的设计</td><td>设计与分析</td></tr>
+      <tr><td><strong>External validity</strong></td><td>能否推广到其他人或情境？</td><td><strong>概率抽样与足够样本量（§3.2）</strong></td><td>抽样与报告</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">12. Pilot Testing &amp; Cronbach's Alpha（预调查与 α）★ 实操</h3>
+
+<div class="box" contenteditable="false">
+  <div class="formula">
+    α = ( k / (k − 1) ) × ( 1 − Σσ²ᵢ / σ²ₜ )<br>
+    <span class="meta">k = 该构念的题目数；σ²ᵢ = 各题方差；σ²ₜ = 总分方差</span>
+  </div>
+  <table>
+    <thead><tr><th>α 值</th><th>判读</th></tr></thead>
+    <tbody>
+      <tr><td>≥ 0.90</td><td>Excellent：<strong>但要检查是否有冗余题目</strong></td></tr>
+      <tr><td>0.80–0.89</td><td>Good</td></tr>
+      <tr class="total"><td>0.70–0.79</td><td><strong>Acceptable：通行门槛</strong></td></tr>
+      <tr><td>0.60–0.69</td><td>Questionable：修改题目</td></tr>
+      <tr><td>&lt; 0.60</td><td>Poor：量表要重做</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">门槛 α ≥ 0.70（Nunnally, 1978）。<strong>要逐个构念报告 α，不要整份工具只报一个数。</strong></div>
+
+  <table>
+    <thead><tr><th>预调查样本</th><th>预试者必须排除在正式研究之外</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul>
+          <li>Saunders：学生问卷<strong>最少 10 人</strong>；大型调查 100–200</li>
+          <li>MBA 常见做法：约为正式样本的 <strong>10%</strong>；<strong>要算 α 的尽量 ≥ 30</strong>，因为小样本下 α 不稳定</li>
+          <li>要覆盖总体的主要差异（如每个层都有）</li>
+          <li><strong>先做专家内容效度评审，再做预试</strong></li>
+        </ul></td>
+        <td><ul>
+          <li>预试者<strong>不参加正式研究</strong>，避免测试效应与污染</li>
+          <li>从同一总体但<strong>在抽样样本之外</strong>取，或取自类似机构（未被抽中的可比银行、医院、郡）</li>
+          <li><strong>在 §3.5 和 §3.2 里都要写明这一点</strong></li>
+          <li>修改或删除<strong>校正题总相关 &lt; 0.3</strong>、或删掉后 α 反而上升的题目；<strong>改动大就重新预试</strong></li>
+          <li><strong>反向计分题要先反向编码再算 α</strong></li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">13. Digital Tools &amp; Running It Online（线上收数据的工具与流程）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>工具</th><th>最适合</th><th>离线</th><th>费用（用前自行核对）</th><th>注意</th></tr></thead>
+    <tbody>
+      <tr><td><strong>KoboToolbox</strong>（KoboCollect）</td><td>手机／平板上的实地调查；跳转逻辑、GPS、照片</td><td><strong>可</strong></td><td>免费社区版：5,000 份/月，1 GB</td><td>基于 ODK；用 XLSForm 或在线编辑器做表</td></tr>
+      <tr><td><strong>ODK Collect + ODK Central</strong></td><td>大型或多点调查；校验与加密强</td><td><strong>可</strong></td><td>自建免费（服务器成本）；ODK Cloud 付费</td><td>需服务器或订阅；上手更陡</td></tr>
+      <tr><td><strong>Google Forms</strong></td><td>面向识字、联网人群的快速线上调查</td><td>否</td><td>有 Google 账号即免费</td><td>逻辑功能基础；限一人一次需登录；数据在 Google 服务器</td></tr>
+      <tr><td><strong>Microsoft Forms</strong></td><td>M365 内部的员工或学生调查</td><td>否</td><td>机构 M365 已含</td><td>限制与 Google Forms 类似；<strong>访问控制更好</strong></td></tr>
+      <tr><td><strong>Qualtrics / SurveyMonkey</strong></td><td>复杂线上调查、随机化、样本库</td><td>有限</td><td>付费；Qualtrics 常由学校授权</td><td>免费层限制题数或回收数</td></tr>
+      <tr><td><strong>Zoom / Teams + 转写</strong></td><td>远程访谈与线上 FGD</td><td>否</td><td>机构授权</td><td><strong>录音须同意；转写要与音频核对</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>线上收数据的六步</h4>
+  <ol>
+    <li><strong>按表建问卷</strong>：表单的每一节 = 操作化表里的一个构念</li>
+    <li><strong>同意页放在最前</strong>：告知书、自愿参与；<strong>必须点"我同意"才能继续</strong></li>
+    <li><strong>校验输入</strong>：必填项、取值范围、跳转逻辑、一人一份</li>
+    <li><strong>用真实链接预试</strong>：和正式一样的链接与设备组合，<strong>并计时</strong></li>
+    <li><strong>发放与监控</strong>：邮件、WhatsApp、二维码；每日跟踪回收；<strong>2–3 次礼貌提醒</strong></li>
+    <li><strong>保护与导出</strong>：最少标识信息；限制访问；<strong>Kenya Data Protection Act 2019</strong>；导出 CSV / SPSS</li>
+  </ol>
+  <div class="note">在 §3.3 里要写明<strong>平台名称、施测方式（线上／访员施测／混合）以及为什么适合你的总体</strong>。</div>
+</div>
+
+<h3 contenteditable="false">14. From §3.3 to the Appendices（评审组会看什么）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>附录</th><th>内容</th><th>常见毛病</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Appendix 1</strong><br>Letter of introduction</td><td>致受访者或接待机构：你是谁、研究目的、<strong>自愿参与</strong>、保密、联系方式。<strong>参与者告知书与同意书附在这里或随工具一起</strong></td><td>通用模板信，<strong>没写明具体研究或所需时间</strong></td></tr>
+      <tr><td><strong>Appendix 2</strong><br>Research instrument(s)</td><td>§3.3 提到的<strong>每一个</strong>工具：问卷、访谈提纲、含主持人脚本的 FGD 提纲、日志模板。<strong>逐个编号，如 2A、2B、2C</strong></td><td>工具缺失，或<strong>题目追溯不到目标</strong></td></tr>
+      <tr><td><strong>Appendix 3</strong><br>Other relevant information</td><td>总体名单、机构或单位清单、<strong>抽样框</strong>、受访者选择标准</td><td><strong>§3.2 的总体没有来源支撑</strong></td></tr>
+      <tr class="total"><td><strong>Appendix 4</strong><br>Timeline of activities</td><td>预试、<strong>伦理审批</strong>、实地工作、转写、分析与写作，<strong>与导师商定</strong></td><td><strong>没有为 SU-ISERC 审批留出实地工作之前的时间</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    §3.3 必须交代：用了哪些方法及其为何契合设计；<strong>访谈谁／每组有谁、各多少人</strong>；工具以及<strong>它是怎么从操作化表和文献生成的</strong>；预试；媒介；录音；谁来收数据、什么时候收。然后写一句："The instrument is attached as Appendix 2."
+  </div>
+</div>
+
+<h3 contenteditable="false">15. Practical — Tool Alignment Matrix（课堂练习）</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li><strong>5 min</strong>：写下你 §3.1 的设计，以及它蕴含的方法</li>
+    <li><strong>15 min</strong>：画一张五列表——<strong>Objective | Construct | Indicator | Item or interview question | Analysis</strong>，填完两个目标</li>
+    <li><strong>10 min</strong>：问卷组每个构念起草 3 道题并命名量表；定性或混合组起草访谈提纲的 Block C 或 FGD 的关键问题</li>
+    <li><strong>10 min</strong>：与同伴互换，<strong>各自标出追溯不到目标的题目，以及没有任何题目的构念</strong></li>
+  </ol>
+
+  <table class="checklist">
+    <thead><tr><th>Objective</th><th>Construct</th><th>Indicator</th><th>Item / interview question</th><th>Analysis</th></tr></thead>
+    <tbody>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>Take-aways：</strong>Design → method → tool，顺序不能反 · 每道题都要追到一个目标和一个构念 ·
+    <strong>FGD 与访谈是定性的，就要按定性来分析</strong> · §3.3 里出现的每个工具都要出现在附录 2。<br>
+    <strong>下次（Week 10，10 月 19 日起）：</strong>用问卷收集一手数据（Saunders Ch. 11）；<strong>带着你的 alignment matrix 来，课上把它变成完整问卷</strong>。
+  </div>
+</div>
+
 <h2 contenteditable="false">作业 · Syndicate Work — Consolidated Review of SU+ Dissertations</h2>
 
 <p class="meta" contenteditable="false">
@@ -3586,7 +4406,7 @@
 
 <script>
 let editMode = false;
-const NOTES_VERSION = '2026-09-28-session6-v1';
+const NOTES_VERSION = '2026-10-19-sessions-7-8-9-v1';
 
 function toggleEdit() {
   editMode = !editMode;
