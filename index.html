@@ -3786,6 +3786,285 @@
   </div>
 </div>
 
+<h2 contenteditable="false">第十节课</h2>
+
+<p class="meta" contenteditable="false">Session 10 · Analysing Quantitative Data（定量数据分析）· <a href="Session10%20Analysing%20Quantitative%20Data.pdf">课件 PDF（14 页）</a><br>
+  落点：concept paper 第三章的<strong>数据分析计划</strong>；最终论文第四章的<strong>研究发现呈现</strong>。<strong>末页是 concept paper 的提交规定，见本节第 10 小节。</strong></p>
+
+<h3 contenteditable="false">1. Learning Objectives（本节目标）</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li>Prepare, code and check quantitative data so it is ready for analysis.<span class="meta"> 准备、编码、检查数据</span></li>
+    <li>Select appropriate statistics — descriptive and inferential — for a given research question.<span class="meta"> 按研究问题选统计量</span></li>
+    <li><strong>Interpret statistical output in relation to the research objectives, not in isolation.</strong><span class="meta"> 对着目标解读输出，不就数字论数字</span></li>
+    <li>Relate techniques to practice — the designs seen in the dissertations reviewed in the Week 3 syndicate exercise.<span class="meta"> 回到第 3 周小组评审过的那些论文</span></li>
+  </ol>
+</div>
+
+<h3 contenteditable="false">2. The Analysis Pathway（分析从目标开始，不是从软件开始）★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <div class="chain">
+    <div>1 Prepare &amp; code<span class="cn">数据矩阵、编码本、缺失值代码</span></div><div class="sep">→</div>
+    <div>2 Check &amp; clean<span class="cn">错误、重复、异常值、信度</span></div><div class="sep">→</div>
+    <div>3 Explore &amp; describe<span class="cn">表、图、集中趋势、离散程度</span></div><div class="sep">→</div>
+    <div>4 Test &amp; model<span class="cn">关联、差异、关系</span></div><div class="sep">→</div>
+    <div>5 Interpret<span class="cn">逐条回答目标、连回理论</span></div>
+  </div>
+  <table>
+    <thead><tr><th>三条告诫</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Plan it before you collect it</strong></td><td>测量尺度、录入格式、编码、加权、查错方法，<strong>都要在数据到来之前定好</strong>（Saunders et al., Ch. 12）。</td></tr>
+      <tr><td><strong>Rubbish in, rubbish out</strong></td><td>软件让人很容易产出<strong>排版精美的胡说八道</strong>；输出可不可信，取决于前期准备。</td></tr>
+      <tr class="total"><td><strong>The golden thread</strong></td><td>Objective → variable &amp; construct（第二章操作化表）→ scale → statistic → interpretation。<strong>断掉任何一环，分析就失败。</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">3. Know Your Data — 测量尺度决定后面的一切 ★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Scale</th><th>商业例子</th><th>用什么描述</th><th>典型检验</th><th>用什么图</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Nominal</strong><span class="meta"><br>名义／类别</span></td><td>行业、性别、地区</td><td>频数、百分比、众数</td><td>Chi-square、Cramér's V、phi</td><td>条形图或饼图</td></tr>
+      <tr><td><strong>Ordinal</strong><span class="meta"><br>序数／等级</span></td><td><strong>单道 Likert 题</strong>、职级</td><td>中位数、四分位距</td><td>Spearman、Mann-Whitney、Kruskal-Wallis</td><td>条形图</td></tr>
+      <tr><td><strong>Interval</strong><span class="meta"><br>等距</span></td><td><strong>多题 Likert 合成分数*</strong></td><td>均值、标准差</td><td>t 检验、ANOVA、Pearson、回归</td><td>直方图、箱线图</td></tr>
+      <tr><td><strong>Ratio</strong><span class="meta"><br>等比</span></td><td>营收、司龄、年龄、销量</td><td>均值、标准差、变异系数</td><td>同等距；趋势可用指数</td><td>直方图、折线、散点</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    *<strong>这个假设要自己辩护。</strong>单道 Likert 题是<strong>序数</strong>的；求和或平均后的多题量表<strong>按惯例当作等距</strong>——<strong>要在第三章写明这一点，并且先检查信度</strong>。<br>
+    等距和等比数据<strong>永远可以向下归并成类别</strong>；<strong>类别数据永远升不回去。</strong>
+  </div>
+</div>
+
+<h3 contenteditable="false">4. Prepare and Code — 跑任何检验之前先建干净的数据矩阵</h3>
+
+<div class="box" contenteditable="false">
+  <ol>
+    <li><strong>Data matrix</strong>：行是个案，列是变量。<strong>第一列是唯一个案 ID，能连回原始问卷。</strong></li>
+    <li><strong>Pre-code the instrument</strong>：封闭题预先给数字编码；开放题<strong>从前 50–100 份建编码本</strong>。</li>
+    <li><strong>Code every cell — 包括缺失值</strong>。deVaus 给的四种缺失原因：<strong>not required（跳答）、refused、don't know、missed in error</strong>。</li>
+    <li><strong>Label and transform</strong>：变量标签与值标签要<strong>照抄问卷原话</strong>；<strong>反向题要反向编码</strong>；计算合成分数；必要时按层加权。</li>
+  </ol>
+
+  <h4>编码后的数据矩阵片段</h4>
+  <table>
+    <thead><tr><th>ID</th><th>Sector</th><th>Tenure</th><th>TL1</th><th>TL2</th><th>TL3r</th><th>TL_mean</th></tr></thead>
+    <tbody>
+      <tr><td>001</td><td>1</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4.33</td></tr>
+      <tr><td>002</td><td>3</td><td>12</td><td>3</td><td>3</td><td>2</td><td>2.67</td></tr>
+      <tr><td>003</td><td>2</td><td><strong>99</strong></td><td>4</td><td><strong>8</strong></td><td>4</td><td>4.00</td></tr>
+      <tr><td>004</td><td>1</td><td>7</td><td>2</td><td>3</td><td><strong>9</strong></td><td>2.50</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>编码本注记：</strong><br>
+    · Sector：1 = Manufacturing，2 = Services，3 = Public<br>
+    · TL1–TL3：1 = Strongly disagree … 5 = Strongly agree；<strong>TL3 为反向题（记作 TL3r）</strong><br>
+    · <strong>缺失：99 = not stated，8 = don't know，9 = refused</strong> —— 在软件里声明为 missing<br>
+    · <strong>TL_mean 只对有效题目求平均</strong>
+  </div>
+</div>
+
+<h3 contenteditable="false">5. Check and Clean — 在评阅人发现之前先找出错误</h3>
+
+<div class="box" contenteditable="false">
+  <h4>Saunders 的三类查错</h4>
+  <table>
+    <thead><tr><th>类型</th><th>例子</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Illegitimate codes</strong><span class="meta"> 非法代码</span></td><td>1–5 量表上出现 7；零被打成字母 O</td></tr>
+      <tr><td><strong>Illogical relationships</strong><span class="meta"> 逻辑矛盾</span></td><td>"高级经理"的司龄只有一个月</td></tr>
+      <tr><td><strong>Filter rules broken</strong><span class="meta"> 跳答规则被破坏</span></td><td>该跳过的题却记录了答案</td></tr>
+    </tbody>
+  </table>
+  <h4>然后做筛查与准备</h4>
+  <ul>
+    <li><strong>重复与格式不一致</strong>（日期、大小写）——删除或统一</li>
+    <li><strong>缺失数据</strong>——<strong>报告缺失的模式</strong>；在 listwise／pairwise／插补之间选择<strong>并说明理由</strong></li>
+    <li><strong>异常值</strong>——用箱线图和 <strong>z 分数超过 ±3</strong> 排查；<strong>是错就改，是真实个案就留</strong></li>
+    <li><strong>信度</strong>——计算合成分数之前，<strong>Cronbach's α 要 ≥ 0.70</strong></li>
+    <li class="term">记录回收率，以及<strong>每一个清洗决定</strong>，留着写第四章</li>
+  </ul>
+</div>
+
+<h3 contenteditable="false">6. Exploring and Presenting Data（按你想让读者看到什么来选图表）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>你想呈现…</th><th>就用</th></tr></thead>
+    <tbody>
+      <tr><td>具体数值</td><td>表格／频数分布表</td></tr>
+      <tr><td>最高与最低</td><td>条形图（类别）；直方图（数值）</td></tr>
+      <tr><td>随时间的趋势</td><td>折线图</td></tr>
+      <tr><td>占比</td><td>饼图；百分比堆积条形图</td></tr>
+      <tr><td>分布与异常值</td><td>直方图；<strong>箱线图</strong></td></tr>
+      <tr><td>两个变量一起看</td><td>交叉表；复式条形图</td></tr>
+      <tr><td>两个数值变量的关系</td><td><strong>散点图</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    每张表和图都必须有：<strong>清晰标题、单位、数据来源、样本量 n、坐标轴或表头标签</strong>，必要时加图例。<strong>不要用 3-D 图——会扭曲。</strong>
+  </div>
+  <div class="note">这一条和 SU Guide §6.0 对得上：表图按章编号（Table 4.1）、来源写在右下角、禁止堆到章末。</div>
+</div>
+
+<h3 contenteditable="false">7. Describing Data Statistically（中心、离散、形状）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>维度</th><th>统计量与适用</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Central tendency</strong><span class="meta"><br>集中趋势</span></td><td><strong>Mean</strong>（数值、对称）· <strong>Median</strong>（偏态或等级）· <strong>Mode</strong>（类别）</td></tr>
+      <tr><td><strong>Dispersion</strong><span class="meta"><br>离散程度</span></td><td>Range · <strong>Inter-quartile range（配中位数）</strong> · <strong>Standard deviation（配均值）</strong> · <strong>Coefficient of variation</strong>（跨组比较）</td></tr>
+      <tr><td><strong>Shape</strong><span class="meta"><br>分布形状</span></td><td>偏度与峰度；正态性检验用<strong>直方图、Q-Q 图、Kolmogorov-Smirnov 或 Shapiro-Wilk</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="formula">
+    z 分数示例：mean = 70，SD = 10，score = 85 → <strong>z = (85 − 70) / 10 = 1.5</strong>，即高于均值 1.5 个标准差。
+  </div>
+</div>
+
+<h3 contenteditable="false">8. Select the Analysis — 你的目标涉及几个变量？</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>层级</th><th>问的问题</th><th>例子</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Univariate</strong><span class="meta"><br>单变量</span></td><td>"它长什么样？"</td><td>肯尼亚银行员工敬业度水平：均值、标准差、频数表、直方图</td></tr>
+      <tr><td><strong>Bivariate</strong><span class="meta"><br>双变量</span></td><td>"X 和 Y 相关吗／有差异吗？"</td><td>变革型领导与敬业度：<strong>Pearson r</strong>；敬业度按行业分：<strong>ANOVA</strong>；性别与职级：<strong>chi-square</strong></td></tr>
+      <tr><td><strong>Multivariate</strong><span class="meta"><br>多变量</span></td><td>"<strong>控制其余变量后</strong>，什么在驱动 Y？"</td><td>四个战略维度对企业绩效、控制企业规模：<strong>多元回归</strong>；调节与中介：<strong>层级回归、PROCESS 或 SEM</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">9. Inferential Statistics — 该用哪个检验 ★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <h4>四个问题决定用哪个检验</h4>
+  <ol>
+    <li><strong>目标是什么</strong>——关联（association）、差异（difference）、关系（relationship）还是预测（prediction）？</li>
+    <li><strong>因变量和自变量各是什么尺度？</strong></li>
+    <li><strong>几组，组间独立还是配对？</strong></li>
+    <li><strong>参数检验的假定满足吗？</strong></li>
+  </ol>
+
+  <table>
+    <thead><tr><th>参数检验的假定</th><th>显著性检验</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul>
+          <li>个案相互独立</li>
+          <li>总体呈正态分布</li>
+          <li><strong>方差齐（Levene's test）</strong></li>
+          <li>数值型数据</li>
+        </ul>
+        <p class="term">不满足？用对应的非参数检验。</p></td>
+        <td><ul>
+          <li>H₀：没有关联或没有差异。<strong>p ≤ 0.05 → 拒绝 H₀</strong></li>
+          <li><strong>Type I</strong>：拒绝了真的 H₀ —— <em>把无辜者定罪</em></li>
+          <li><strong>Type II</strong>：保留了假的 H₀ —— <em>把有罪者放走</em></li>
+          <li class="term">大样本会让<strong>微不足道的效应也变显著</strong></li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">10. Interpret Output — 把输出读回它要回答的那个目标 ★ 重点</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Objective</th><th>Hypothesis</th><th>Test</th><th>报告的输出</th><th>对该目标的解读</th></tr></thead>
+    <tbody>
+      <tr><td>Determine the effect of transformational leadership on employee engagement</td><td>H₀₁：无显著影响</td><td>Simple linear regression</td><td><strong>β = 0.46, t = 6.10, p &lt; .001, R² = .21</strong></td><td>拒绝 H₀₁。领导风格解释了敬业度约 <strong>21%</strong> 的变异——与第二章综述的理论一致。</td></tr>
+      <tr><td>Examine whether engagement differs by sector</td><td>H₀₂：各行业无差异</td><td>One-way ANOVA + Tukey post hoc</td><td><strong>F(2, 197) = 4.37, p = .014, η² = .04</strong></td><td>拒绝 H₀₂。服务业高于公共部门，<strong>但效应很小</strong>。</td></tr>
+      <tr><td>Establish whether grade is associated with gender</td><td>H₀₃：无关联</td><td>Chi-square + Cramér's V</td><td><strong>χ²(4) = 33.59, p &lt; .001; V = .295</strong></td><td>拒绝 H₀₃。显著<strong>但关联较弱</strong>：男性更可能处于较高职级。</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>三条报告纪律</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Report fully</strong></td><td>统计量、自由度、p 值、<strong>效应量</strong>，尽可能加置信区间。<strong>软件显示 p = .000，要写成 p &lt; .001。</strong></td></tr>
+      <tr><td><strong>Significant ≠ important</strong></td><td>实际意义要看<strong>效应量和情境</strong>，不能只看 p 值。</td></tr>
+      <tr class="total"><td><strong>Association ≠ causation</strong></td><td>横断面调查显示的是<strong>关系</strong>；<strong>除非设计支持，否则不要用因果动词。</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 contenteditable="false">11. Tools for Analysis（软件怎么选）</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>工具</th><th>类型</th><th>最适合</th><th>在 MBA 论文里的典型用途</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Excel</strong></td><td>电子表格 + Analysis ToolPak</td><td>录入、清洗、描述统计、数据透视、图表</td><td>建数据矩阵；频数与交叉表</td></tr>
+      <tr><td><strong>SPSS</strong></td><td>菜单式统计包</td><td>t 检验、ANOVA、卡方、相关、回归、Cronbach's α</td><td><strong>带 Likert 量表的问卷调查</strong></td></tr>
+      <tr><td><strong>Stata / EViews</strong></td><td>命令式计量</td><td>面板、时间序列、二手数据；<strong>可留存 do-file</strong></td><td><strong>跨年度的企业、银行或国家数据</strong></td></tr>
+      <tr><td><strong>R（RStudio）</strong></td><td>免费开源代码</td><td>从描述到高级模型；图形能力强</td><td>超出菜单软件的分析；<strong>可复现脚本</strong></td></tr>
+      <tr><td><strong>Python</strong></td><td>通用编程（pandas, statsmodels）</td><td>大数据、自动化、机器学习</td><td>网页、交易或社交媒体数据</td></tr>
+      <tr><td><strong>SmartPLS / AMOS</strong></td><td>结构方程建模</td><td>潜变量、中介与调节</td><td><strong>检验由多题构念组成的概念框架</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <strong>先选检验，再选工具</strong>——统计量定了，上面任何一个都能跑 t 检验或回归。<br>
+    <strong>免费与授权</strong>：R、Python、JASP 免费；SPSS、Stata、AMOS、SmartPLS 需授权，先确认学校提供哪些。<br>
+    <strong>保持可复现</strong>：保存 syntax、do-file 或脚本，<strong>让评阅人能追溯第四章的每一个结果</strong>。
+  </div>
+</div>
+
+<h3 contenteditable="false">12. Apply — 审计第 3 周那批论文，然后自己跑一遍</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>Syndicate audit（对应作业 8）</th><th>Statistical practical（五步）</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><ul>
+          <li>把每个目标<strong>映射到实际用的检验</strong></li>
+          <li>数据是否做了筛查？假定是否报告？</li>
+          <li>图表是否配得上数据类型和问题？</li>
+          <li>解读是否<strong>回到目标和理论</strong>？</li>
+        </ul>
+        <p class="term">红旗：对<strong>单道 Likert 题用 Pearson</strong> · 卡方里<strong>大量期望频数低于 5</strong> · <strong>回归不做诊断</strong> · <strong>用横断面数据下因果结论</strong></p></td>
+        <td><ol>
+          <li><strong>Load and inspect</strong>：打开样本数据与编码本；声明缺失值</li>
+          <li><strong>Screen</strong>：查非法代码与异常值；反向编码；算 α 与合成分数</li>
+          <li><strong>Describe</strong>：频数、均值与标准差、直方图与箱线图；检查正态性</li>
+          <li><strong>Test</strong>：交叉表加卡方、t 检验、ANOVA、Pearson 或 Spearman、简单与多元回归</li>
+          <li><strong>Write up</strong>：<strong>每个目标一段报告文字、一张表、一张图</strong></li>
+        </ol></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note">那四个红旗里，前两个正是 8.5 评审 Muddie (2024) 时查出来的同类问题（把借用量表的维度硬拆、回归诊断只报了一半）。审计自己的稿子时同样适用。</div>
+</div>
+
+<h3 contenteditable="false">13. Concept Paper — 期末提交规定 ★ 必看</h3>
+
+<div class="box" contenteditable="false">
+  <table>
+    <thead><tr><th>要求</th><th>细则</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. 遵循 Strathmore 规范</strong></td><td>结构、格式、引用<strong>必须按学校的研究论文规范</strong>（即 SU Guide）。<br><strong>题名页页脚要有声明</strong>：原创作品、<strong>署印刷体姓名</strong>、<strong>并声明 AI 使用情况</strong>。</td></tr>
+      <tr class="total"><td><strong>2. 交两个版本</strong></td><td>· <strong>MS Word 版通过系统上传，考试当天 1300hrs EAT 截止</strong>（注意 AI 检测与查重政策）<br>· <strong>装订纸质版</strong>在考试当天当面交，<strong>同时签考试点名册</strong><br><span class="term">没签点名册 = 不予评分。任何 AI 使用都必须声明。</span></td></tr>
+      <tr><td><strong>3. 约 20 页正文</strong></td><td>顺序固定：<br>① <strong>Title page</strong>（以声明结尾）→ ② <strong>Abstract</strong> → ③ <strong>Table of contents</strong> → ④ <strong>Main body</strong> → ⑤ <strong>References（APA 7th）</strong> → ⑥ <strong>Appendix</strong>（数据收集工具样本）</td></tr>
+    </tbody>
+  </table>
+  <div class="answer">
+    两个硬门槛：<strong>1300hrs EAT 上传 Word 版</strong>；<strong>当天交装订纸质版并签点名册</strong>。<span style="font-weight:normal;">两者缺一不可。</span>
+  </div>
+  <div class="note">
+    几点与前面课次的衔接：<br>
+    · <strong>摘要字数</strong>：SU Guide §7.2(b) 规定 proposal 摘要 <strong>≤ 300 词</strong>（最终论文才是 ≤ 500 词）——按 concept paper 的标准来。<br>
+    · <strong>附录</strong>要放<strong>数据收集工具样本</strong>，对应第九节课第 14 小节讲的 Appendix 2。<br>
+    · <strong>"约 20 页正文"</strong>是新信息：SU Guide 对 proposal 的规定是 ≤5,000 词（15–20 页），两者一致。
+  </div>
+</div>
+
 <h2 contenteditable="false">作业 · Syndicate Work — Consolidated Review of SU+ Dissertations</h2>
 
 <p class="meta" contenteditable="false">
@@ -4406,7 +4685,7 @@
 
 <script>
 let editMode = false;
-const NOTES_VERSION = '2026-10-19-sessions-7-8-9-v1';
+const NOTES_VERSION = '2026-11-02-session10-v1';
 
 function toggleEdit() {
   editMode = !editMode;
